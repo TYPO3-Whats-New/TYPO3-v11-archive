@@ -1,0 +1,29 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.5 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 95200 | Deprecate RequireJS callbacks as inline JavaScript
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{RequireJS Callback Functions}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Using RequireJS callback functions has been marked as
+			\textbf{deprecated}\newline
+			\small(for example: \texttt{\$resultArray['requireJsModules']} with scalar \texttt{string})\normalsize
+		\item These calls should be replace by new \texttt{JavaScriptModuleInstruction} declarations
+		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.5/Deprecation-95200-DeprecateRequireJSCallbacksAsInlineJavaScript.html}{changelog}
+			for further details and migration options
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

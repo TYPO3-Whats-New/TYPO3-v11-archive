@@ -1,0 +1,337 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11 LTS - What's New
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11 LTS - What's New}
+\subtitle{Summary of the new features, changes and improvements}
+\author{
+	\centerline{Created by:}
+	\centerline{Michael Schams}
+}
+
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11 LTS - What's New}
+\begin{frame}[fragile]
+	\frametitle{Chapter Overview}
+	\framesubtitle{Chapter Overview}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+\include{Chapters/Introduction/TheFacts}
+\include{Chapters/Introduction/ExecutiveSummary}
+\include{Chapters/Introduction/SystemRequirements-1}
+\include{Chapters/Introduction/SystemRequirements-2}
+\include{Chapters/Introduction/DevelopmentSupportAndMaintenanceTimeline}
+\include{Chapters/Introduction/Releases}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+\include{Chapters/BackendUserInterface/11.0/1607207249.BootstrapVersion5}
+% hidden \include{Chapters/BackendUserInterface/11.0/1607207274.ResizableTextArea}
+\include{Chapters/BackendUserInterface/11.0/1607220455.SystemNotesButton}
+\include{Chapters/BackendUserInterface/11.0/1607313678.DateTimePicker}
+\include{Chapters/BackendUserInterface/11.0/1607724330.DeletePagesRecursively}
+\include{Chapters/BackendUserInterface/11.0/1607753890.ContextMenuAccessibleByKeyboard}
+\include{Chapters/BackendUserInterface/11.1/1612763310-ResetBackendUserModuleFilter}
+\include{Chapters/BackendUserInterface/11.1/1612764665-ResizableNavigationComponent}
+% hidden \include{Chapters/BackendUserInterface/11.1/1613179329-BackendModuleMenusAccessibility}
+% hidden \include{Chapters/BackendUserInterface/11.1/1613729428-BackendModuleFilelist}
+\include{Chapters/BackendUserInterface/11.2/1618056830-SvgPageTreeInRecordSelector}
+\include{Chapters/BackendUserInterface/11.2/1618058137-ResizableNavigationForRecordSelectors}
+\include{Chapters/BackendUserInterface/11.3/1624539664-ListModuleSelectableColumns}
+\include{Chapters/BackendUserInterface/11.3/1624465207-ListModuleExtendedView}
+\include{Chapters/BackendUserInterface/11.3/1625410067-ListModuleDataExport}
+\include{Chapters/BackendUserInterface/11.3/1625840959-SelectionOfFilesAndRecords}
+\include{Chapters/BackendUserInterface/11.3/1625840302-StreamlineFileListAndClipboardSelectionOptions}
+% hidden \include{Chapters/BackendUserInterface/11.3/1624525506-RedirectCreationDate}
+\include{Chapters/BackendUserInterface/11.3/1624541526-InheritedBackendLayouts}
+% hidden \include{Chapters/BackendUserInterface/11.3/1624551450-WebInfoBackendLayout}
+\include{Chapters/BackendUserInterface/11.4/1629315611-MultiRecordSelectionInFilelist}
+\include{Chapters/BackendUserInterface/11.4/1630609836-DownloadInFilelist}
+\include{Chapters/BackendUserInterface/11.4/1630085033-ColumnsSelectionInFilelist}
+\include{Chapters/BackendUserInterface/11.4/1628691536-ShowColumnsSelectorFilter}
+\include{Chapters/BackendUserInterface/11.4/1629112590-ImprovedWorkspacesModule-1}
+\include{Chapters/BackendUserInterface/11.4/1629112590-ImprovedWorkspacesModule-2}
+\include{Chapters/BackendUserInterface/11.4/1629474065-DefaultLanguageInPageModule}
+\include{Chapters/BackendUserInterface/11.4/1630429872-CollapseAllForLargeTrees}
+\include{Chapters/BackendUserInterface/11.4/1628697182-FilterForRedirectsNeverHit}
+\include{Chapters/BackendUserInterface/11.0/1607319051.CleanupRedirects}
+\include{Chapters/BackendUserInterface/11.4/1630430305-Miscellaneous}
+% hidden \include{Chapters/BackendUserInterface/11.5/1632741076-NewRecordWizard-1}
+\include{Chapters/BackendUserInterface/11.5/1632741076-NewRecordWizard-2}
+
+% Chapter "Multi-Factor Authentication (MFA)"
+\include{Chapters/MultiFactorAuthentication/ChapterTitle}
+\include{Chapters/MultiFactorAuthentication/11.1/1613731375-BackendMfaSetup}
+\include{Chapters/MultiFactorAuthentication/11.1/1613731375-MultiFactorAuthentication1}
+\include{Chapters/MultiFactorAuthentication/11.1/1613731375-MultiFactorAuthentication2}
+\include{Chapters/MultiFactorAuthentication/11.1/1613731375-MultiFactorAuthentication3}
+\include{Chapters/MultiFactorAuthentication/11.1/1613731375-MultiFactorAuthentication4}
+
+% Chapter "Deep Links in the Backend"
+\include{Chapters/DeepLinksInTheBackend/ChapterTitle}
+\include{Chapters/DeepLinksInTheBackend/11.2/1618653909-DeepLinkingInTheBackend}
+\include{Chapters/DeepLinksInTheBackend/11.3/1624461728-CopyDeepLinksToClipboard}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607207417.ExtensionManager}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607207451.ResizableTextArea}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607207466.Miscellaneous}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607319051.CleanupRedirects}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607732861.PageLayoutTypoScriptCondition}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607733425.LockIpRemoved}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607735828.AdminPanelHiddenUserGroups}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1608090165.TemplateContentObject}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1608340310.BackendUrlRewrites-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1608340310.BackendUrlRewrites-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607206263.EmailValidation}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607207519.DateTimeAspect}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607214783.PageLanguageDetection}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607217779.FrontendUserGroups}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607230204.PhpBasedJavaScriptAndCssInclusions}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607312249.BackendLinkUriViewHelper}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607314144.SessionStorageWrapper}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607728049.RedirectMiddlewarePosition}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607736243.SessionHandling}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607754653.AppendCookieToResponse}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607755344.PSR7inFrontendContentObjects-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607755344.PSR7inFrontendContentObjects-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607909671.PageRenderer}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1608167888.ShortcutAPI}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607207373.FormFramework}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607209026.ExtensionRepositoryApi}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607210238.ExpandSelectCheckBox}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607211972.CKEditorPluginPlaceholder}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607215823.ExtendableConfigurationModule}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607722445.Flatpickr}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607724330.DeletePagesRecursively}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1607758293.AddQueryStringMethod}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.1/1613184704-LazyConsoleCommandListDeveloper}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.1/1613184704-LazyConsoleCommandListIntegrators}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.1/1613186569-BackendRoutesHttpMethods}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.1/1613188713-IconOverlayForNewContentElementWizard}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.1/1613194504-BackendLoginLogoAlt}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.1/1613197522-FlexFormProcessor}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1617957677-CacheForErrorPageHandling}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1617959943-TableConfigurationArrayDescription}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1617963761-ListOfSystemLocales}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1617965186-DisableCanonicalAndHreflangPerPage}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1617967924-UserGroupLookupsInConditions}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1618056830-SvgPageTreeInRecordSelector}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1618060062-NewTcaTypeLanguage}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1618140569-EventAfterSiteConfigurationLoadedFromDistribution}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1619607624-GetFileForFolderObject}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.2/1619609244-TbeEditorFieldChanged}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624440730-ChangesToPasswordResetFunctionality}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624448548-UseProperLoggingMessages}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624456907-DisableAspectRatios}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624460365-CreateNewFilemount}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624461728-CopyDeepLinksToClipboard}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624539664-ListModuleSelectableColumns}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624542642-SitemapExcludePagesRecursive}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624545154-ReadOnlyT3editor}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624546324-SymfonyMailerDsn}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624549247-RefreshDashboardWidgets-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1624549247-RefreshDashboardWidgets-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1625570936-FileDumpController}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1625583835-GetModuleTemplate-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1625583835-GetModuleTemplate-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.3/1625756851-AutoDetectEventTypes}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1628689510-RegisteringIconsViaServiceContainer}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1628694288-NewTcaTypeCategory-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1628694288-NewTcaTypeCategory-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629108442-FormsDatePickerJs}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.0/1608170030.Workspaces}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629112590-ImprovedWorkspacesModule}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629366829-QuoteDatabaseIdentifiers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629371425-EnableImportantFieldsForBackendUsers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629373421-ShowNewRecordLinkOption}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629389128-SoftReferenceParsers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629390874-ClearIndexedSearchDocuments}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629393438-IconIdentifiersInReportModule}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629469686-FileFolderTcaConfiguration-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629469686-FileFolderTcaConfiguration-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629479254-CKEditorAutolinkingUsesHttpsNow}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629481662-DoctrineDbalNoInSet}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629544381-HtmlParserAttributeSrcset}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630085462-GlobalNamespace}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630157845-ForeignTableWherePlaceholderForSiteConfiguration}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629898814-CliExportCommand}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1629994541-CliCacheWarmup}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630427644-CliCacheFlush}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630159356-ComposerBasedInstallations-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630159356-ComposerBasedInstallations-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630169297-CacheManagerOrDatabaseConnectionsDuringBootstrap}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630612668-Psr14Events-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630612668-Psr14Events-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630613381-DebuggerInApplicationInformation}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630741910-AutoCreationOfMmTables}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630743452-AutowiredLoggerInterfaceInjection}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630777043-Php8AttributesLoggerInjection}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630831982-FormEngineTreeConfig}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.4/1630838818-LinkResultObject}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.5/1632745670-TcaOptionGroupName}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.5/1633093036-TcaOptionInternalDb}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.5/1633093768-ModifyResolvedFrontendGroupsEvent}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/11.5/1633351217-Bootstrap5TemplateVariants}
+
+% Chapter "Extbase and Fluid"
+\include{Chapters/ExtbaseAndFluid/ChapterTitle}
+\include{Chapters/ExtbaseAndFluid/11.0/1608081221.PluginAndModuleRegistration}
+\include{Chapters/ExtbaseAndFluid/11.0/1607207528.PSR7Responses}
+\include{Chapters/ExtbaseAndFluid/11.0/1607751471.ForwardResponse-1}
+\include{Chapters/ExtbaseAndFluid/11.0/1607751471.ForwardResponse-2}
+\include{Chapters/ExtbaseAndFluid/11.0/1607832451.ActionsMustReturnResponseInterface}
+\include{Chapters/ExtbaseAndFluid/11.3/1625395880-PSR7-RequestResponse}
+\include{Chapters/ExtbaseAndFluid/11.3/1625407019-PSR7-DeprecatedMethods}
+\include{Chapters/ExtbaseAndFluid/11.3/1625407019-PSR7-DeprecationsReferringRequest}
+\include{Chapters/ExtbaseAndFluid/11.3/1625407019-PSR7-DeprecationsResponseInterface}
+\include{Chapters/ExtbaseAndFluid/11.0/1607218870.RegularExpressionValidator}
+\include{Chapters/ExtbaseAndFluid/11.0/1607746695.ActionController}
+\include{Chapters/ExtbaseAndFluid/11.0/1608082368.PropertyDependencyInjection-1}
+\include{Chapters/ExtbaseAndFluid/11.0/1608084687.PropertyDependencyInjection-2}
+\include{Chapters/ExtbaseAndFluid/11.3/1625582843-AddErrorForProperty}
+\include{Chapters/ExtbaseAndFluid/11.3/1625677832-ParameterTypeEvaluation}
+\include{Chapters/ExtbaseAndFluid/11.4/1629477521-JsonViewRecursiveTransformation}
+\include{Chapters/ExtbaseAndFluid/11.4/1629547908-DeprecationOfExtbaseObjectManager}
+\include{Chapters/ExtbaseAndFluid/11.4/1629549958-DeprecationOfGenericExtbaseDomainClasses}
+\include{Chapters/ExtbaseAndFluid/11.4/1630171131-ContentObjectRendererInStandaloneView}
+\include{Chapters/ExtbaseAndFluid/11.4/1630662562-CollectionTypesOfNonPersistentObjects}
+\include{Chapters/ExtbaseAndFluid/11.5/1632501640-DeprecatedPhpClasses}
+\include{Chapters/ExtbaseAndFluid/11.4/1630162994-FluidViewCleanUp}
+\include{Chapters/ExtbaseAndFluid/11.0/1607227727.FluidWidgets}
+\include{Chapters/ExtbaseAndFluid/11.1/1613198555-TypolinkViewhelperLinkWrapping}
+\include{Chapters/ExtbaseAndFluid/11.3/1625064098-FileViewHelper}
+\include{Chapters/ExtbaseAndFluid/11.2/1619609921-IgnoreSubmittedValuesInHiddenViewHelper}
+\include{Chapters/ExtbaseAndFluid/11.4/1629369480-FluidViewHelpersUseHttpsByDefault}
+\include{Chapters/ExtbaseAndFluid/11.4/1629384810-PasswordViewHelperAutoCompleteAttribute}
+\include{Chapters/ExtbaseAndFluid/11.5/1632503094-ViewhelpersWillBeDeclaredFinal}
+\include{Chapters/ExtbaseAndFluid/11.5/1632659127-ViewHelperTransformHtml}
+\include{Chapters/ExtbaseAndFluid/11.5/1632501129-DeprecateViewHelperUriEmail}
+\include{Chapters/ExtbaseAndFluid/11.0/1607322346.Miscellaneous}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607207557.DatabaseRelatedChanges}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607213696.StyleAndLinkTagsWithoutTypeAttribute}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607231144.Typo3ModeAndRequestTypeConstants}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607736243.SessionHandling}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607757344.BackendShortcutAndBookmark}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607831827.AbstractUserAuthentication}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1608087246.Workspaces}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1608338779.FrontendUserGroupRetrieval}
+\include{Chapters/DeprecatedRemovedFunctions/11.1/1613187094-T3EditorCodeMirrorElement}
+\include{Chapters/DeprecatedRemovedFunctions/11.1/1613196704-RenameSortableJS}
+\include{Chapters/DeprecatedRemovedFunctions/11.1/1613382913-jQueryTooltips}
+\include{Chapters/DeprecatedRemovedFunctions/11.2/1617883144-DeprecatedTypoScriptParserRelatedProperties}
+\include{Chapters/DeprecatedRemovedFunctions/11.2/1617966682-PropertySpecialOfTCATypeSelect}
+\include{Chapters/DeprecatedRemovedFunctions/11.2/1619606129-DeprecateNavigationFrameModule}
+\include{Chapters/DeprecatedRemovedFunctions/11.2/1619610726-RteHtmlParserTransformation}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625593797-DatabaseTableSysLanguage}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625595126-HttpUtility}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625747403-ViewHelperDeprecations}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625747723-FileAbstractionLayerPublicUrl}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625748926-ArrayUtilityArrayDiffAssocRecursive}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1629561561-SoftReferenceIndex}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1629618389-DeprecatedCacheBackends}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1630162382-JavaScriptDeprecations}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1630171423-EditPanelRelatedFrontendFunctionality-1}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1630171423-EditPanelRelatedFrontendFunctionality-2}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1630222609-CliLowerCamelCaseOptions}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632502576-PhpFunctionStrStartsWith}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632668006-DeprecateCustomJSWindowOptions}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632668539-DeprecateImportSyntax}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669019-NavigationFrameModule}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669020-SectionMarkupGeneratedEvent}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669021-IndexedSearchSword}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669022-AuthenticationObjects}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669023-VariousGetInstanceMethods}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1633347666-DeprecateRequireJsCallbacks}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607226365.Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607226365.Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/11.0/1607226365.Miscellaneous-3}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625594919-Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/11.3/1625594919-Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1629546141-Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1629546141-Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1629546141-Miscellaneous-3}
+\include{Chapters/DeprecatedRemovedFunctions/11.4/1629546141-Miscellaneous-4}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669024-Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669024-Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/11.5/1632669024-Miscellaneous-3}
+
+% Chapter "Miscellaneous"
+\include{Chapters/Miscellaneous/ChapterTitle}
+\include{Chapters/Miscellaneous/11.0/1607209026.RedirectHttpHeaders}
+\include{Chapters/Miscellaneous/11.0/1607212652.LinkValidator-1}
+\include{Chapters/Miscellaneous/11.0/1607212652.LinkValidator-2}
+\include{Chapters/Miscellaneous/11.0/1607219624.Security}
+\include{Chapters/Miscellaneous/11.2/1618061152-BackendUsersPreferredLanguage}
+\include{Chapters/Miscellaneous/11.2/1618141201-UpdateXliffVersion}
+\include{Chapters/Miscellaneous/11.3/1624524172-LanguageSupportShona}
+\include{Chapters/Miscellaneous/11.3/1625413151-LoginThrottlingByRateLimiting}
+\include{Chapters/Miscellaneous/11.4/1629108037-PackageUpdates}
+\include{Chapters/Miscellaneous/11.2/1618142494-PackagesAndLibrariesUpdated}
+\include{Chapters/Miscellaneous/11.0/1607207578.Miscellaneous}
+\include{Chapters/Miscellaneous/11.4/1630599324-Miscellaneous-1}
+
+% Chapter "Installation and Upgrade"
+\include{Chapters/InstallationAndUpgrade/ChapterTitle}
+\include{Chapters/InstallationAndUpgrade/InstallationComposer}
+\include{Chapters/InstallationAndUpgrade/InstallationTraditional}
+\include{Chapters/InstallationAndUpgrade/InstallationAndUpgrade}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewSlidesAndTranslations}
+
+% ------------------------------------------------------------------------------
+\end{document}

@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93526 | Multi-Factor Authentication (3)
+
+\begin{frame}[fragile]
+	\frametitle{Multi-factor Authentication}
+	\framesubtitle{Multi-factor Authentication}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item TSconfig can be used to disable the MFA field for backend users:
+\begin{lstlisting}
+setup.fields.mfaProviders.disabled = 1
+\end{lstlisting}
+
+		\item It is possible to restrict the available providers for some users
+			or groups (see "Access Rights/List"), or by TSconfig:
+\begin{lstlisting}
+auth.mfa.disableProviders := addToList(totp)
+\end{lstlisting}
+
+		\item The following global configuration can be used to recommend a provider:\newline
+			\smaller\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['BE']['recommendedMfaProvider']}\normalsize
+
+		\item Integrators can overwrite the global configuration by TSconfig:
+\begin{lstlisting}
+auth.mfa.recommendedProvider = totp
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

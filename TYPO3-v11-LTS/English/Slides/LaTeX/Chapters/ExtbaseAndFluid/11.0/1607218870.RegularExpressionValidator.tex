@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 91719 | Custom error messages in RegularExpressionValidator
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{RegularExpression Validator}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Custom error messages can be returned by using the new option
+			\texttt{errorMessage} of the RegularExpressionValidator:
+\begin{lstlisting}
+class MyModel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+{
+  /**
+   * @var string
+   * @TYPO3\CMS\Extbase\Annotation\Validate(
+   *   "RegularExpression",
+   *   options={
+   *     "regularExpression": '/^SO[0-9]$/',
+   *     "errorMessage": 'LLL:EXT:my_ext/path/to/xlf:translation.key'
+   *   }
+   * )
+   */
+  protected $customField;
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

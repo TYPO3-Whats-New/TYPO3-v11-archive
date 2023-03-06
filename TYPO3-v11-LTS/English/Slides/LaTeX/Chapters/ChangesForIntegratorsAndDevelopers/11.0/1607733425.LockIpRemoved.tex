@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 92559 | Removed per-user IP locking for backend users
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{IP-Lock for Backend Users}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item TYPO3 v11 still supports to lock a backend user session to an
+			IP address or IP address range by using the following option:\newline
+			\smaller\texttt{\$TYPO3\_CONF\_VARS[BE][lockIP]}\normalsize
+		\item In previous TYPO3 versions, administrators were able to overwrite
+			this configuration for \textit{specific} backend users if required.
+		\item This user-specific configuration, along with the following database
+			field and the TCA definition, have been removed:\newline
+			\smaller\texttt{be\_users.disableIPlock}\normalsize
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

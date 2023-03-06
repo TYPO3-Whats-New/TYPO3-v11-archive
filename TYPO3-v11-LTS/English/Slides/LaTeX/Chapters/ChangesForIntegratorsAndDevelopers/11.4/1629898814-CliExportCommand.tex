@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 84718 | Add CLI export command to EXT:impexp
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{TYPO3 CLI}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item New command added to TYPO3's command line interface (CLI):
+\begin{lstlisting}
+./bin/typo3 impexp:export [options] [--] [<filename>]
+\end{lstlisting}
+		\item The "export" completes the existing "import" functionality
+		\item The command exports the entire TYPO3 page tree or parts of it
+		\item Integrators and administrators can influence the export through
+			a wide range of options (e.g. file type, page tree depth, etc.)
+		\item Exports can be re-imported into other TYPO3 instances or
+			used as initial page trees in a distribution
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

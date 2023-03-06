@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92984 | PSR-7 Request available in Frontend ContentObjects
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{PSR-7 Responses in ContentObjects}
+
+	\begin{itemize}
+		\item PSR-7 standardized request objects have been added to frontend ContentObjects.
+		\item Any kind of custom cObject using PHP code can now access the PSR-7
+			Request object to fetch information about the current request.
+		\item This method should be used instead of superglobal variables
+			such as\newline
+			\smaller\texttt{\$\_GET}, \texttt{\$\_POST}, \texttt{\$\_SERVER},\normalsize
+			or TYPO3's API methods\newline
+			\smaller\texttt{GeneralUtility::\_GP()}\normalsize
+			and
+			\smaller\texttt{GeneralUtility::getIndpEnv()}\normalsize.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94316 | Deprecated HTTP header manipulating methods from HttpUtility
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{HTTP Utility}
+
+	\begin{itemize}
+		\item To properly follow the \href{https://www.php-fig.org/psr/psr-7/}{PSR-7 standard},
+			the following methods from the HTTP Utility have been marked as \textbf{deprecated}:
+
+			\begin{itemize}
+				\item \texttt{redirect()}
+				\item \texttt{setResponseCode()}
+				\item \texttt{setResponseCodeAndExit()}
+			\end{itemize}
+
+		\item See the
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94316-DeprecatedHTTPHeaderManipulatingMethodsFromHttpUtility.html}{changelog}
+			for further details and migration options
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

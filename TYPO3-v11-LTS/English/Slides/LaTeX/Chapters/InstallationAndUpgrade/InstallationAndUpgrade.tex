@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11 LTS - What's New
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Upgrade to TYPO3 v11 LTS
+
+\begin{frame}[fragile]
+	\frametitle{Installation and Upgrade}
+	\framesubtitle{Upgrade to TYPO3 v11 LTS}
+
+	\begin{itemize}
+		\item Upgrades are only possible from TYPO3 v10 LTS.
+		\item Sites using TYPO3 < v10 LTS should be updated to the latest v10.4.x first.
+	\end{itemize}
+
+	\begin{itemize}
+		\item General approach:
+			\begin{itemize}
+				\item Check minimum system requirements \small(PHP, MySQL, etc.)
+				\item Review \textbf{deprecation\_*.log} in old TYPO3 instance
+				\item Update all extensions to the latest compatible version
+				\item Run the \href{https://docs.typo3.org/m/typo3/reference-coreapi/11.5/en-us/ApiOverview/ExtensionScanner/Index.html}{Extension Scanner} to detect potential issues
+				\item Deploy new sources and run Install Tool -> Upgrade Wizard
+			\end{itemize}
+		\item Read more in the official
+			\href{https://docs.typo3.org/m/typo3/guide-installation/11.5/en-us/Index.html}{TYPO3 Upgrade Guide}.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

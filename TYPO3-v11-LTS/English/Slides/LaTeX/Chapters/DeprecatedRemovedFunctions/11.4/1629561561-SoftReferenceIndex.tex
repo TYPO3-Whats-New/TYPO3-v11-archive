@@ -1,0 +1,57 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94687 | Deprecate SoftReferenceIndex
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{The \texttt{SoftReferenceIndex} Class}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The following class has been marked as \textbf{deprecated}:
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Database\textbackslash
+					SoftReferenceIndex}
+			\end{itemize}\normalsize
+		\vspace{0.1cm}
+		\item The following methods have been marked as \textbf{deprecated}:
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Utility\textbackslash
+					BackendUtility::softRefParserObj}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Utility\textbackslash
+					BackendUtility::explodeSoftRefParserList}
+			\end{itemize}\normalsize
+		\vspace{0.1cm}
+		\item Custom SoftReference parsers must implement the following interface:\newline
+			\small(otherwise a deprecation error will be logged)\normalsize
+				\begin{itemize}\smaller
+					\item \fontsize{7}{9}\selectfont
+					\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Core\textbackslash
+						DataHandling\textbackslash
+						SoftReference\textbackslash
+						SoftReferenceParserInterface}
+			\end{itemize}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

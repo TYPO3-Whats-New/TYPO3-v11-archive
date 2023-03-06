@@ -1,0 +1,26 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92358 | Add getModuleTemplate() to PageLayoutController
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{PageLayoutController}
+
+	\begin{itemize}
+		\item The \texttt{PageLayoutController} now contains the new method\newline
+			\texttt{getModuleTemplate()}
+		\item This gives developers more options to manipulate the page module
+			when using the \texttt{drawHeaderHook} and \texttt{drawFooterHook}
+		\item The new method can be used to retrieve the corresponding ModuleTemplate
+			instance as the example code on the next page shows
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,45 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% ???
+
+\begin{frame}[fragile]
+	\frametitle{Backend User Interface}
+	\framesubtitle{Deep Linking in the Backend}
+
+	Deep linking is now possible in the TYPO3 backend. This lets users share links
+	with other users and it makes working with the backend much more efficient.
+
+	\begin{figure}
+		\includegraphics[width=0.85\linewidth]{BackendUserInterface/11.2/1618653909-DeepLinkingInTheBackend.png}
+	\end{figure}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+	\frametitle{Backend User Interface}
+	\framesubtitle{Deep Linking in the Backend}
+
+	Some examples of deep links:
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item (Pre)view page (ID=123):\newline
+			\fontsize{8}{10}\texttt{https://example.com/typo3/module/web/ViewpageView?id=123}\normalsize
+		\item Edit the Site Configuration:
+			\fontsize{8}{10}\texttt{https://example.com/typo3/module/site/configuration?action=edit}\normalsize
+		\item Edit a content element (ID=42):
+			\fontsize{8}{10}\texttt{https://example.com/typo3/record/edit?edit[tt\_content][42]=edit}\normalsize
+		\item Open the module "Backend Users":
+			\fontsize{8}{10}\texttt{https://example.com/typo3/module/system/BeuserTxBeuser}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

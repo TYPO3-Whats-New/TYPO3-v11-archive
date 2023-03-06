@@ -1,0 +1,34 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93436 | Introduce cache:warmup command
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{TYPO3 CLI}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item New command added to TYPO3's command line interface (CLI):
+\begin{lstlisting}
+./bin/typo3 cache:warmup [--group <all|system|di|pages|...>]
+\end{lstlisting}
+		\item Integrators can now warm up all caches (default) or selectively
+			through the available cache groups
+		\item Specific cache groups can be defined with the
+			\texttt{-}\texttt{-group} option:\newline
+			\small\texttt{system}, \texttt{pages}, \texttt{di}, or \texttt{all} (default: \texttt{all})\normalsize
+		\item Note: not \textit{all} caches can be warmed up (yet)\newline
+			\small(e.g. frontend cache, RequireJS assets cache, Extbase caches,
+				Fluid templates are currently excluded)\normalsize
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
