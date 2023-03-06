@@ -1,0 +1,50 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.5 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 95164 | ext:backend BackendTemplateView
+% Deprecation | 95275 | RelationHandler->remapMM()
+% Deprecation | 95254 | Two FlexFormTools methods
+% Deprecation | 95235 | Public getter of services in ModuleTemplate
+% Deprecation | 91814 | Deprecate AbstractControl::setOnClick
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Miscellaneous (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The following class has been marked as \textbf{deprecated}:
+\begin{lstlisting}
+TYPO3\CMS\Backend\View\BackendTemplateView
+\end{lstlisting}
+		\item The following methods have been marked as \textbf{deprecated}:
+\begin{lstlisting}
+TYPO3\CMS\Core\Database\RelationHandler->remapMM()
+\end{lstlisting}
+\vspace{-0.2cm}
+\begin{lstlisting}
+TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools->getArrayValueByPath()
+TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools->setArrayValueByPath()
+\end{lstlisting}
+\vspace{-0.2cm}
+\begin{lstlisting}
+TPO3\CMS\Backend\Template\ModuleTemplate->getIconFactory()
+TPO3\CMS\Backend\Template\ModuleTemplate->getPageRenderer()
+\end{lstlisting}
+\vspace{-0.2cm}
+\begin{lstlisting}
+\TYPO3\CMS\Backend\Template\Components\AbstractControl->setOnClick()
+\TYPO3\CMS\Backend\Template\Components\AbstractControl->getOnClick()
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

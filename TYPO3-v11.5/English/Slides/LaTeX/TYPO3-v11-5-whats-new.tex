@@ -1,0 +1,117 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.5 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11.5 - What's New}
+\subtitle{Summary of the new features, changes and improvements}
+\author{
+	\centerline{Created by:}
+	\centerline{Michael Schams}
+}
+
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11.5 - What's New}
+\begin{frame}[fragile]
+	\frametitle{Chapter Overview}
+	\framesubtitle{Chapter Overview}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+\include{Chapters/Introduction/TheFacts}
+\include{Chapters/Introduction/ExecutiveSummary}
+\include{Chapters/Introduction/SystemRequirements}
+\include{Chapters/Introduction/DevelopmentTimeline}
+\include{Chapters/Introduction/ReleaseDates}
+\include{Chapters/Introduction/InstallationComposer}
+\include{Chapters/Introduction/InstallationTraditional}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+\include{Chapters/BackendUserInterface/1632741076-NewRecordWizard-1}
+% \include{Chapters/BackendUserInterface/1632741076-NewRecordWizard-2}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1632745670-TcaOptionGroupName}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1633093036-TcaOptionInternalDb}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1633093768-ModifyResolvedFrontendGroupsEvent}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1633351217-Bootstrap5TemplateVariants}
+
+% Chapter "ExtbaseAndFluid"
+\include{Chapters/ExtbaseAndFluid/ChapterTitle}
+\include{Chapters/ExtbaseAndFluid/1632503094-ViewhelpersWillBeDeclaredFinal}
+\include{Chapters/ExtbaseAndFluid/1632659127-ViewHelperTransformHtml}
+\include{Chapters/ExtbaseAndFluid/1632501129-DeprecateViewHelperUriEmail}
+\include{Chapters/ExtbaseAndFluid/1632501640-DeprecatedPhpClasses}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+\include{Chapters/DeprecatedRemovedFunctions/1632668006-DeprecateCustomJSWindowOptions}
+\include{Chapters/DeprecatedRemovedFunctions/1632668539-DeprecateImportSyntax}
+\include{Chapters/DeprecatedRemovedFunctions/1632669023-VariousGetInstanceMethods}
+\include{Chapters/DeprecatedRemovedFunctions/1632669022-AuthenticationObjects}
+\include{Chapters/DeprecatedRemovedFunctions/1632669021-IndexedSearchSword}
+\include{Chapters/DeprecatedRemovedFunctions/1632669020-SectionMarkupGeneratedEvent}
+\include{Chapters/DeprecatedRemovedFunctions/1632502576-PhpFunctionStrStartsWith}
+\include{Chapters/DeprecatedRemovedFunctions/1632669019-NavigationFrameModule}
+\include{Chapters/DeprecatedRemovedFunctions/1633347666-DeprecateRequireJsCallbacks}
+\include{Chapters/DeprecatedRemovedFunctions/1632669024-Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/1632669024-Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/1632669024-Miscellaneous-3}
+
+% Chapter "Miscellaneous"
+% \include{Chapters/Miscellaneous/ChapterTitle}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewSlidesAndTranslations}
+
+% ------------------------------------------------------------------------------
+\end{document}
