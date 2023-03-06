@@ -1,0 +1,45 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Important | 94876 | Remove Non-XML text validator from form editor
+% Deprecation | 95080 | FileDump CheckFileAccess hook
+% Deprecation | 95077 | Filelist editIconsHook
+% Deprecation | 95065 | Hook extTablesInclusion-PostProcessing
+% Deprecation | 95089 | ExtendedFileUtility ProcessData hook
+% Deprecation | 95083 | Backend toolbar CacheActions hook
+% Deprecation | 95105 | DatabaseRecordList hooks
+% Important | 94889 | AbstractTypoLinkBuilder::build now returns arrayLinkResultInterface
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Divers (4)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Le validateur «~Texte non-XML~» est retiré de l'interface de l'éditeur de formulaire
+		\item Le hook suivante est marqué \textbf{déprécié}~:
+\begin{lstlisting}
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['extTablesInclusion-PostProcessing']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['actions']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_extfilefunc.php']['processData']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['additionalBackendItems']['cacheActions']
+\end{lstlisting}
+		\item Le type de retour \texttt{array} de la méthode suivante est retiré~:\newline
+			\smaller(la fonction retournera un \texttt{LinkResultInterface} dans TYPO3 v12)\normalsize
+\begin{lstlisting}
+TYPO3\CMS\Frontend\Typolink\AbstractTypolinkBuilder::build()
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

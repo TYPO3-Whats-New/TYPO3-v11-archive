@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 95105 | New PSR-14 DatabaseRecordList events
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Événements PSR-14 (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item Ces événements PSR-14 sont ajoutés au noyau de TYPO3~:
+			\begin{itemize}
+				\item \texttt{ModifyRecordListTableActionsEvent}
+				\item \texttt{ModifyRecordListHeaderColumnsEvent}
+				\item \texttt{ModifyRecordListRecordActionsEvent}
+			\end{itemize}
+		\item Ces événements sont utilisés pour modifier le comportement des listes des tables
+		\item Ils servent à ajouter, modifier, ou retirer des colonnes ou actions
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-95105-NewPSR-14DatabaseRecordListEvents.html}{journal des changements (en)}
+			pour plus de détails
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

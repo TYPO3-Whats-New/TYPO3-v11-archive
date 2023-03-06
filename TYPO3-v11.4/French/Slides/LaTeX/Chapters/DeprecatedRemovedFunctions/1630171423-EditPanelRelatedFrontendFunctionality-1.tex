@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94953 | Edit panel related frontend functionality
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Dépréciation du panneau d'édition (1)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Ces propriétés TypoScript sont marquées \textbf{dépréciées}~:
+			\begin{itemize}\small
+				\item \texttt{stdWrap.editPanel}
+				\item \texttt{stdWrap.editIcons}
+			\end{itemize}\normalsize
+		\item Ce cObject est marqué \textbf{déprécié}~:
+			\begin{itemize}\small
+				\item \texttt{EDITPANEL}
+			\end{itemize}\normalsize
+		\item Les méthodes et propriétés liés des classes PHP suivantes
+			sont marquées \textbf{dépréciées}~:
+\begin{lstlisting}
+TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer
+TYPO3\CMS\Frontend\ContentObject\EditPanelContentObject
+TYPO3\CMS\Frontend\Plugin\AbstractPlugin
+TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 94406 | Override fileFolder TCA configuration with TSconfig
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Configuration TCA~: \texttt{fileFolderConfig}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Les intégrateurs peuvent surcharger la configuration TCA en TSconfig
+		\item Par exemple~:
+\begin{lstlisting}
+config.fileFolderConfig.folder
+config.fileFolderConfig.allowedExtensions
+config.fileFolderConfig.depth
+\end{lstlisting}
+
+		\item Lire plus~:
+
+			\begin{itemize}
+				\item Configuration TCA
+					«~\href{https://docs.typo3.org/m/typo3/reference-tca/master/en-us/ColumnsConfig/Type/Select/Properties/FileFolder.html#filefolder}{FileFolder}~»
+					(documentation TYPO3)
+				\item Plus d'informations sur le changement dans le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94406-OverrideFileFolderTCAConfigurationWithTSconfig.html}{journal des changements (en)}
+		\end{itemize}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

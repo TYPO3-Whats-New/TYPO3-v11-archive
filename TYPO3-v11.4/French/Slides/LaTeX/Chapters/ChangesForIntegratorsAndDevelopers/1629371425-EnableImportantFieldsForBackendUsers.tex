@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Important | 92202 | Remove exclude from important fields
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Champs importants}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Ces deux champs sont maintenant toujours activés/affiché dans le TCA~:
+			\begin{itemize}
+				\item \texttt{tt\_content.colPos}
+				\item \texttt{pages.slug}
+			\end{itemize}
+		\item Ceci empêche les intégrateurs de mal configurer accidentellement les
+			permissions d'accès des utilisateurs backend
+		\item Le TSconfig suivant surcharge les paramètres par défaut et cache ces
+			champs si requis~:
+\begin{lstlisting}
+TCEFORM.pages.slug.disabled = 1
+TCEFORM.tt_content.colPos.disabled = 1
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

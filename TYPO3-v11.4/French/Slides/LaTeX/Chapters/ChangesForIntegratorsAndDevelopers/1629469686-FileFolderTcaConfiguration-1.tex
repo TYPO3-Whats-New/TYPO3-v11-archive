@@ -1,0 +1,64 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 94406 | Override fileFolder TCA configuration with TSconfig
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Configuration TCA~: \texttt{fileFolder}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{5}{6}\ttfamily}
+
+	\begin{itemize}
+		\item La configuration TCA «~\texttt{fileFolder}~» est rationalisée
+		\item Les options sont disponibles sous «~\texttt{fileFolderConfig}~»~:
+	\end{itemize}
+
+	\begin{columns}[T]
+		\begin{column}{.04\textwidth}
+		\end{column}
+		\begin{column}{.48\textwidth}
+			\smaller TYPO3 < v11.4 \normalsize
+\begin{lstlisting}
+'fieldname' => [
+  'config' => [
+    'type' => 'select',
+    'renderType' => 'selectSingle',
+    'fileFolder' => 'EXT:myext/Resources/Public/Icons',
+    'fileFolder_extList' => 'svg',
+    'fileFolder_recursions' => 1
+  ]
+]
+\end{lstlisting}
+		\end{column}
+		\begin{column}{.48\textwidth}
+			\smaller TYPO3 >= v11.4 \normalsize
+\begin{lstlisting}
+'fieldname' => [
+  'config' => [
+    'type' => 'select',
+    'renderType' => 'selectSingle',
+    'fileFolderConfig' => [
+      'folder' => 'EXT:myext/Resources/Public/Icons',
+      'allowedExtensions' => 'svg',
+      'depth' => 1
+    ]
+  ]
+]
+\end{lstlisting}
+		\end{column}
+	\end{columns}
+
+	\begin{itemize}
+		\item Notez le sous-tableau «~\texttt{fileFolderConfig}~» et le nouveau nom des options
+			(ex. «~\texttt{depth}~») dans TYPO3 >= v11.4
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

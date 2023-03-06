@@ -1,0 +1,58 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 90347 | Enable recursive transformation of properties in JsonView
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Transformation récursive de propriété}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Les développeurs peuvent utiliser la propriété «~\texttt{\_recursive}~» dans
+			la configuration de JsonView pour résoudre les propriétés récursivement
+		\item Ceci simplifie l'implémentation de, par exemple, dossiers
+			contenant des dossiers ou de commentaires contenant des réponses, etc.
+		\item Exemples~:
+	\end{itemize}
+
+	\begin{columns}[T]
+		\begin{column}{.03\textwidth}
+		\end{column}
+		\begin{column}{.485\textwidth}
+			\begin{itemize}\small
+				\item 1:n relations
+\begin{lstlisting}
+$configuration = [
+  'directories' => [
+    '_descendAll' => [
+      '_recursive' => ['directories']
+    ]
+  ]
+];
+\end{lstlisting}
+			\end{itemize}\normalsize
+		\end{column}
+		\begin{column}{.485\textwidth}
+			\begin{itemize}\small
+				\item 1:1 relations
+\begin{lstlisting}
+$configuration = [
+  'comment' => [
+    '_recursive' => ['comment']
+  ]
+];
+\end{lstlisting}
+			\end{itemize}\normalsize
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

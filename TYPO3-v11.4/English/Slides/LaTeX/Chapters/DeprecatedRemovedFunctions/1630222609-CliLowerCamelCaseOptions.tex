@@ -1,0 +1,64 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94902 | Deprecate lowerCamelCase options of EXT:impexp commands
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{TYPO3 CLI command \texttt{impexp}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item The following lowerCamelCase options of the TYPO3 CLI command
+			"\texttt{impexp}" have been marked as \textbf{deprecated}:
+	\end{itemize}
+
+	\begin{columns}[T]
+		\begin{column}{.06\textwidth}
+		\end{column}
+		\begin{column}{.47\textwidth}
+			\smaller\textbf{Deprecated}:\normalsize
+\begin{lstlisting}
+impexp:export --includeRelated
+impexp:export --includeStatic
+impexp:export --excludeDisabledRecords
+impexp:export --excludeHtmlCss
+impexp:export --saveFilesOutsideExportFile
+
+
+impexp:import --updateRecords
+impexp:import --ignorePid
+impexp:import --forceUid
+impexp:import --importMode
+impexp:import --enableLog
+\end{lstlisting}
+		\end{column}
+		\begin{column}{.47\textwidth}
+			\smaller\textbf{Replacement}:\normalsize
+\begin{lstlisting}
+impexp:export --include-related
+impexp:export --include-static
+impexp:export --exclude-disabled-records
+impexp:export --exclude-html-css
+impexp:export
+  --save-files-outside-export-file
+
+impexp:import --update-records
+impexp:import --ignore-pid
+impexp:import --force-uid
+impexp:import --import-mode
+impexp:import --enable-log
+\end{lstlisting}
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

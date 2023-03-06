@@ -1,0 +1,27 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 95061 | Auto creation of MM tables from TCA
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Tables MM}
+
+	\begin{itemize}
+		\item L'analyseur de schéma TYPO3 détecte les tables «~MM~» de la base de données et
+			les crée automatiquement à partir de la définition TCA
+		\item Une configuration TCA de colonne définie une table MM pour~:\newline
+			\small\texttt{type='select'}, \texttt{type='group'}, ou \texttt{type='inline'}\normalsize
+		\item Les développeurs d'extension sont encouragés à \textbf{retirer} les instructions
+			\texttt{CREATE TABLE} des fichiers \texttt{ext\_tables.sql} pour les tables «~MM~»
+		\item L'analyseur de schéma prend soin des champs requis en plus de
+			\small\texttt{uid\_local} et \texttt{uid\_foreign}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

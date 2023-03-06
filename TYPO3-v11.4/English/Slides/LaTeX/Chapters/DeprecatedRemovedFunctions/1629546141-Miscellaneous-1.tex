@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Breaking | 70528 | Deprecated form mixins removed
+% Deprecation | 85613 | Category Registry
+% Deprecation | 94684 | GeneralUtility::shortMD5()
+% Deprecation | 95037 | rootUid related setting of trees
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Miscellaneous (1)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The following Form Framework setup mixins have been \textbf{removed}:\newline
+			\small\texttt{TYPO3.CMS.Form.mixins.*}\normalsize
+		\item The "\texttt{CategoryRegistry}" and the following method have been
+			marked as \textbf{deprecated}:\newline
+			\texttt{ExtensionManagementUtility::makeCategorizable()}\newline
+			\small(use the new TCA type "\texttt{category}" instead)\normalsize
+		\item The following method has been marked as \textbf{deprecated}:\newline
+			\small
+				\texttt{GeneralUtility::shortMD5()}\newline
+				\texttt{DatabaseTreeDataProvider::setRootUid()}\newline
+				\texttt{DatabaseTreeDataProvider::getRootUid()}
+			\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94664 | Pdo cache backend
+% Deprecation | 94665 | Wincache cache backend
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Backends de cache}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Ces implémentations de backend du framework de cache sont marquées \textbf{dépréciées}~:
+			\begin{itemize}\small
+				\item
+					\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Core\textbackslash
+						Cache\textbackslash
+						Backend\textbackslash
+						PdoBackend}
+				\item \texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Core\textbackslash
+						Cache\textbackslash
+						Backend\textbackslash
+						WincacheBackend}
+			\end{itemize}\normalsize
+		\item Migration~: basculez sur un autre backend disponible
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

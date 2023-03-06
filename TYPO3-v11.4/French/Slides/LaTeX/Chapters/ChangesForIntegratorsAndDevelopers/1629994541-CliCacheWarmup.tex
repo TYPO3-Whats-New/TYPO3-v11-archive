@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93436 | Introduce cache:warmup command
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{TYPO3 CLI (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item Commande ajoutée à l'interface de ligne de commande (CLI) TYPO3~:
+\begin{lstlisting}
+./bin/typo3 cache:warmup [--group <all|system|di|pages|...>]
+\end{lstlisting}
+		\item Les intégrateurs peuvent initialiser tous les caches (par défaut) ou sélectivement
+			à l'aide des groupes de cache
+		\item Les groupes spécifiques se définissent avec l'option
+			\texttt{-}\texttt{-group}~:\newline
+			\small\texttt{system}, \texttt{pages}, \texttt{di}, ou \texttt{all} (par défaut~: \texttt{all})\normalsize
+		\item Note~: les caches ne peuvent (pour l'instant) pas \textit{tous} être initialisés\newline
+			\small(ex. cache frontend, cache des ressources RequireJS, caches Extbase,
+				et gabarits Fluid sont actuellement exclus)\normalsize
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

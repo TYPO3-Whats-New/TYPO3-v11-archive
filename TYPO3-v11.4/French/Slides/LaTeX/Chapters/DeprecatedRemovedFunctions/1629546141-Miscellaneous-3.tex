@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94956 | Public cObj
+% Deprecation | 95062 | skipSorting argument of RelationHandler->writeForeignField()
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Divers (3)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Déclarer une propriété \texttt{\$cObj} avec une visibilité publique dans une
+			classe appelée par \texttt{ContentObjectRenderer->callUserFunction()}
+			déclenche une erreur de dépréciation
+		\item Le quatrième argument «~\texttt{\$skipSorting}~» de la méthode suivante
+			est marqué \textbf{déprécié}~:
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Database\textbackslash
+				RelationHandler->writeForeignField()}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 71775 | HtmlParser allows srcset
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{La classe \texttt{HtmlParser}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item L'\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Examples/ParsingHtml/Index.html}{analyseur HTML}
+			prend en charge l'attribut «~\texttt{srcset}~»
+		\item C'est important pour les images adaptatives
+		\item Exemple 1~:
+\begin{lstlisting}
+<picture>
+  <source media="(max-width: 799px)" srcset="small-image.jpg">
+  <source media="(min-width: 800px)" srcset="large-image.jpg">
+</picture>
+\end{lstlisting}
+		\item Exemple 2~:
+\begin{lstlisting}
+<img srcset="small-image.jpg 640w, large-image.jpg 1024w"
+  sizes="(max-width: 799px) 640px, 1024px"
+  src="large-image.jpg" />
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

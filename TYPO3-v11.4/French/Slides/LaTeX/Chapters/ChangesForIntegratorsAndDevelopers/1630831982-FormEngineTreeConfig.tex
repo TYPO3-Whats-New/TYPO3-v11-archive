@@ -1,0 +1,37 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 95037 | New startingPoints setting for FormEngine treeConfig
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Option TCA \texttt{treeConfig}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item L'option \texttt{startingPoints} est introduit à la configuration TCA
+			\texttt{treeConfig}
+		\item Cette option permet aux développeurs de définir
+			de multiples enregistrements comme racine de l'arborescence, basé sur une liste CSV d'identifiants de page
+		\item Par exemple~:
+\begin{lstlisting}
+// Example TCA config
+'config' => [
+  'treeConfig' => [
+    'startingPoints' => '1,2,3',
+  ]
+]
+\end{lstlisting}
+		\item Les développeurs peuvent aussi accéder à des valeurs venant de la configuration de site
+		 	en utilisant la syntaxe~: \small«~\texttt{\#\#\#SITE:...\#\#\#}~»\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

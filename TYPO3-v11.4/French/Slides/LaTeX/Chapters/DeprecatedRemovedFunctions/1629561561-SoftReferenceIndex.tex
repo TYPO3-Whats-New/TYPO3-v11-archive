@@ -1,0 +1,56 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94687 | Deprecate SoftReferenceIndex
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{La classe \texttt{SoftReferenceIndex}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Cette classe est marquée \textbf{dépréciée}~:
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Database\textbackslash
+					SoftReferenceIndex}
+			\end{itemize}\normalsize
+		\vspace{0.1cm}
+		\item Ces méthodes sont marquées \textbf{dépréciées}~:
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Utility\textbackslash
+					BackendUtility::softRefParserObj}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Utility\textbackslash
+					BackendUtility::explodeSoftRefParserList}
+			\end{itemize}\normalsize
+		\vspace{0.1cm}
+		\item Les analyseurs de références légère personnalisés doivent implémenter l'interface suivante~:\newline
+			\small(sinon, une erreur de dépréciation sera journalisée)\normalsize
+				\begin{itemize}\smaller
+					\item \fontsize{7}{9}\selectfont
+					\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Core\textbackslash
+						DataHandling\textbackslash
+						SoftReference\textbackslash
+						SoftReferenceParserInterface}
+			\end{itemize}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,35 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 94692 | Registering Icons via Service Container
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Inscription de pictogrammes}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Les développeurs d'extensions peuvent inscrire leurs pictogrammes à l'aide d'un conteneur de service
+		\item La nouvelle approche améliore significativement les performances des requêtes
+		\item Enregistrer la configuration dans le fichier \texttt{Configuration/Icons.php}~:
+\begin{lstlisting}
+<?php
+return [
+  'myicon' => [
+    'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    'source' => 'EXT:my_extension/Resources/Public/Icons/myicon.svg'
+  ]
+];
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

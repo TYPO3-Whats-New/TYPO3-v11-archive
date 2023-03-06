@@ -1,0 +1,43 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Important | 94615 | Fluid view helpers f:linkexternal and f:uriexternal use https by default
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{ViewHelpers Fluid}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Les ViewHelpers Fluid «~\texttt{f:uri.external}~» et «~\texttt{f:link.external}~»
+			utilisent le schéma \textbf{https} par défaut
+		\item Par exemple~:
+\begin{lstlisting}
+<f:link.external uri="example.com">
+  external link
+</f:link.external>
+\end{lstlisting}
+			Génère le lien~:
+\begin{lstlisting}
+<a href="https://example.com">external link</a>
+\end{lstlisting}
+
+		\item Pour surcharger la valeur par défaut, les développeurs peuvent définir le
+			schéma comme suit (ex. «~http~»)~:
+\begin{lstlisting}
+<f:link.external uri="example.com" defaultScheme="http">
+  external link
+</f:link.external>
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

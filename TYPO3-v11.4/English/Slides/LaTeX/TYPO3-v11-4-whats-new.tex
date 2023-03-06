@@ -1,0 +1,157 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11.4 - What's New}
+\subtitle{Summary of the new features, changes and improvements}
+\author{
+	\centerline{Created by:}
+	\centerline{Michael Schams}
+}
+
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11.4 - What's New}
+\begin{frame}[fragile]
+	\frametitle{Chapter Overview}
+	\framesubtitle{Chapter Overview}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+\include{Chapters/Introduction/TheFacts}
+\include{Chapters/Introduction/ExecutiveSummary}
+\include{Chapters/Introduction/SystemRequirements}
+\include{Chapters/Introduction/DevelopmentTimeline}
+\include{Chapters/Introduction/ReleaseDates}
+\include{Chapters/Introduction/InstallationComposer}
+\include{Chapters/Introduction/InstallationTraditional}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+\include{Chapters/BackendUserInterface/1629315611-MultiRecordSelectionInFilelist}
+\include{Chapters/BackendUserInterface/1630609836-DownloadInFilelist}
+\include{Chapters/BackendUserInterface/1630085033-ColumnsSelectionInFilelist}
+\include{Chapters/BackendUserInterface/1628691536-ShowColumnsSelectorFilter}
+\include{Chapters/BackendUserInterface/1629112590-ImprovedWorkspacesModule-1}
+\include{Chapters/BackendUserInterface/1629112590-ImprovedWorkspacesModule-2}
+\include{Chapters/BackendUserInterface/1629474065-DefaultLanguageInPageModule}
+\include{Chapters/BackendUserInterface/1630429872-CollapseAllForLargeTrees}
+\include{Chapters/BackendUserInterface/1628697182-FilterForRedirectsNeverHit}
+\include{Chapters/BackendUserInterface/1630430305-Miscellaneous}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1628694288-NewTcaTypeCategory-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1628694288-NewTcaTypeCategory-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629469686-FileFolderTcaConfiguration-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629469686-FileFolderTcaConfiguration-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630157845-ForeignTableWherePlaceholderForSiteConfiguration}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630831982-FormEngineTreeConfig}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1628689510-RegisteringIconsViaServiceContainer}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629108442-FormsDatePickerJs}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629112590-ImprovedWorkspacesModule}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629366829-QuoteDatabaseIdentifiers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629371425-EnableImportantFieldsForBackendUsers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629373421-ShowNewRecordLinkOption}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629389128-SoftReferenceParsers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629390874-ClearIndexedSearchDocuments}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629393438-IconIdentifiersInReportModule}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629479254-CKEditorAutolinkingUsesHttpsNow}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629481662-DoctrineDbalNoInSet}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629544381-HtmlParserAttributeSrcset}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629898814-CliExportCommand}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1629994541-CliCacheWarmup}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630427644-CliCacheFlush}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630085462-GlobalNamespace}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630169297-CacheManagerOrDatabaseConnectionsDuringBootstrap}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630159356-ComposerBasedInstallations-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630159356-ComposerBasedInstallations-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630612668-Psr14Events-1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630612668-Psr14Events-2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630741910-AutoCreationOfMmTables}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630743452-AutowiredLoggerInterfaceInjection}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630777043-Php8AttributesLoggerInjection}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630838818-LinkResultObject}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1630613381-DebuggerInApplicationInformation}
+
+% Chapter "ExtbaseAndFluid"
+\include{Chapters/ExtbaseAndFluid/ChapterTitle}
+\include{Chapters/ExtbaseAndFluid/1629547908-DeprecationOfExtbaseObjectManager}
+\include{Chapters/ExtbaseAndFluid/1629549958-DeprecationOfGenericExtbaseDomainClasses}
+\include{Chapters/ExtbaseAndFluid/1630662562-CollectionTypesOfNonPersistentObjects}
+\include{Chapters/ExtbaseAndFluid/1629477521-JsonViewRecursiveTransformation}
+\include{Chapters/ExtbaseAndFluid/1629369480-FluidViewHelpersUseHttpsByDefault}
+\include{Chapters/ExtbaseAndFluid/1629384810-PasswordViewHelperAutoCompleteAttribute}
+\include{Chapters/ExtbaseAndFluid/1630171131-ContentObjectRendererInStandaloneView}
+\include{Chapters/ExtbaseAndFluid/1630162994-FluidViewCleanUp}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+\include{Chapters/DeprecatedRemovedFunctions/1629561561-SoftReferenceIndex}
+\include{Chapters/DeprecatedRemovedFunctions/1629618389-DeprecatedCacheBackends}
+\include{Chapters/DeprecatedRemovedFunctions/1630162382-JavaScriptDeprecations}
+\include{Chapters/DeprecatedRemovedFunctions/1630171423-EditPanelRelatedFrontendFunctionality-1}
+\include{Chapters/DeprecatedRemovedFunctions/1630171423-EditPanelRelatedFrontendFunctionality-2}
+\include{Chapters/DeprecatedRemovedFunctions/1630222609-CliLowerCamelCaseOptions}
+\include{Chapters/DeprecatedRemovedFunctions/1629546141-Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/1629546141-Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/1629546141-Miscellaneous-3}
+\include{Chapters/DeprecatedRemovedFunctions/1629546141-Miscellaneous-4}
+
+% Chapter "Miscellaneous"
+\include{Chapters/Miscellaneous/ChapterTitle}
+\include{Chapters/Miscellaneous/1629108037-PackageUpdates}
+\include{Chapters/Miscellaneous/1630599324-Miscellaneous-1}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewSlidesAndTranslations}
+
+% ------------------------------------------------------------------------------
+\end{document}

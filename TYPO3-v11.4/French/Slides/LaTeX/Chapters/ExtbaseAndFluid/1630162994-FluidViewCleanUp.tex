@@ -1,0 +1,51 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 95005 | Extbase EmptyView
+% Deprecation | 94991 | Extbase AbstractView
+% Deprecation | 95003 | Extbase ViewInterface canRender()
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Nettoyage des vues Fluid}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Du nettoyage a été effectué pour simplifier et rationnaliser les vues Fluid
+			\begin{itemize}
+				\item Les classes suivantes sont marquées \textbf{dépréciées}~:\newline
+					\small\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Extbase\textbackslash
+						Mvc\textbackslash
+						View\textbackslash
+						EmptyView}\normalsize\newline
+					\small\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Extbase\textbackslash
+						Mvc\textbackslash
+						View\textbackslash
+						AbstractView}\normalsize
+			\end{itemize}
+
+			\begin{itemize}
+				\item La méthode \texttt{canRender()} est retirée de l'interface suivante~:\newline
+					\small\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Extbase\textbackslash
+						Mvc\textbackslash
+						View\textbackslash
+						ViewInterface}\normalsize
+			\end{itemize}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

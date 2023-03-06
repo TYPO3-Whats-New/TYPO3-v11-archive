@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94953 | Edit panel related frontend functionality
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Dépréciation du panneau d'édition (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item La classe suivante est marquée \textbf{dépréciée}~:
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Frontend\textbackslash
+					ContentObject\textbackslash
+					EditPanelContentObject}
+			\end{itemize}\normalsize
+		\item Le hook suivant est marqué \textbf{déprécié}~:
+\begin{lstlisting}
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']
+  ['typo3/classes/class.frontendedit.php']
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
