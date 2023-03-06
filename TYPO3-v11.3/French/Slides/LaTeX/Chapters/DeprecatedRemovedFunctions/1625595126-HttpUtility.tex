@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94316 | Deprecated HTTP header manipulating methods from HttpUtility
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{HTTP Utility}
+
+	\begin{itemize}
+		\item Afin de suivre proprement le \href{https://www.php-fig.org/psr/psr-7/}{standard PSR-7},
+			ces méthodes de l'HTTP Utility sont marquées \textbf{dépréciées}~:
+
+			\begin{itemize}
+				\item \texttt{redirect()}
+				\item \texttt{setResponseCode()}
+				\item \texttt{setResponseCodeAndExit()}
+			\end{itemize}
+
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94316-DeprecatedHTTPHeaderManipulatingMethodsFromHttpUtility.html}{journal des changements (en)}
+			pour plus d'information et les options de migration
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

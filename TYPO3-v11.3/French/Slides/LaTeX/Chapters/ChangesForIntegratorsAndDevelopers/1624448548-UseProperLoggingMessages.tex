@@ -1,0 +1,37 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Important | 94315 | Use proper PSR-3 logging messages and context
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Messages et contexte de journalisation PSR-3}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Pour adhérer entièrement à la \href{https://www.php-fig.org/psr/psr-3/}{spécification PSR-3 (en)},
+			le noyau de TYPO3 utilise des textes à substituer dans les messages à journaliser~:
+\begin{lstlisting}
+$this->logger->alert(
+  'Text text text {placeholder} text text.',
+  ['placeholder' => $variable]
+);
+\end{lstlisting}
+
+		\item Nous encourageons les développeurs à relire leur code et suivre la spécification
+		\item \textbf{Ne pas} implémenter la journalisation de cette manière~:
+\begin{lstlisting}
+$this->logger->alert('Text text text ' . $variable . ' text text.');
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

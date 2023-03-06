@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93835 | AddErrorForProperty function for AbstractValidator
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Messages personnalisés pour les résultats de validation}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item La méthode \texttt{addErrorForProperty()} permet aux développeurs de
+		    définir des messages personnalisés
+		\item Elle s'applique aux propriétés des modèles Extbase
+		\item Exemple dans une classe de validation~:
+\begin{lstlisting}
+public function isValid(): void
+{
+  // validation
+  $this->addErrorForProperty(
+    'object.property.name',
+    $this->translateErrorMessage(
+      'validator.errormessage',
+      'myextension'
+    ),
+    1626134400 // timestamp
+  );
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

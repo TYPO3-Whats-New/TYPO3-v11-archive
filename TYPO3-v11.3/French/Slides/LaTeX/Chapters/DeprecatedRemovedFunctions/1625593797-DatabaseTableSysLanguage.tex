@@ -1,0 +1,27 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94165 | sys_language table
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Table \texttt{sys\_language}}
+
+	\begin{itemize}
+		\item Utiliser la table \texttt{sys\_language} est classé comme \textbf{déprécié}
+		\item Les langues utilisées dans les configurations de site sont indépendantes des enregistrements
+			\texttt{sys\_language} record
+		\item Les développeurs sont avisés de lire les langues disponibles et leurs informations
+			depuis la configuration de site
+		\item Par exemple, utiliser le nouveau type TCA \texttt{language} au lieu de
+			\texttt{foreign\_table => sys\_language}
+			(voir \href{https://forge.typo3.org/issues/57082}{\#57082} pour les détails)
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,44 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94351 | ext:extbase StopActionException
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Requête/Réponse PSR-7 (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Les actions Extbase \textbf{devront} renvoyer un objet \texttt{ResponseInterface}
+		\item Les extensions sont affectées si~:
+			\begin{itemize}
+				\item Elles lèvent une \texttt{StopActionException}
+				\item Elles utilisent la méthode \texttt{redirect()}
+				\item Elles utilisent la méthode \texttt{redirectToUri()}
+			\end{itemize}
+		\item Exemple de migration~:
+\begin{lstlisting}
+// Code before:
+public function fooAction()
+{
+   $this->redirect('otherAction');
+}
+
+// Code after:
+public function fooAction(): ResponseInterface
+{
+   return $this->redirect('otherAction');
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,34 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 94218 | Selectable columns per table in record list
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Module Liste~: Sélection des colonnes}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Les utilisateurs backend peuvent choisir les colonnes à afficher pour chaque table
+			sans passer par le mode vue table seule
+		\item Les intégrateurs peuvent désactiver le «~sélecteur de colonne~» pour certaines tables
+			ou pour toutes les tables avec du TSconfig utilisateur~:
+\begin{lstlisting}
+# disable the column selector for the table "tt_content"
+mod.web_list.table.tt_content.displayColumnSelector = 0
+
+# disable the column selector for all tables in general
+mod.web_list.displayColumnSelector = 0
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

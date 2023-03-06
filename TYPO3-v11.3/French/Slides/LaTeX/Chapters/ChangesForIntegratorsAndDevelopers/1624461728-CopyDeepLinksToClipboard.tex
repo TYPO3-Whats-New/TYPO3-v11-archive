@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93921 | Sharing backend links
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Partage des liens backend}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item La constante \texttt{SHAREABLE\_URL} est disponible dans UriBuilder
+		\item Les développeurs peuvent générer des liens partageables (URLs) de pages du backend en utilisant
+			cette constante
+		\item Par exemple~:
+\begin{lstlisting}
+$uri = $uriBuilder->buildUriFromRoute(
+  $routeName, $arguments, UriBuilder::SHAREABLE_URL
+);
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

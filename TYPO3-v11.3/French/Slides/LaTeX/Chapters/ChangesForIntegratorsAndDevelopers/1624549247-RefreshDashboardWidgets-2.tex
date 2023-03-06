@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93210 | Possibility to refresh dashboard widgets
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Rafraichissement du tableau de bord (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Définir l'option de configuration \texttt{refreshAvailable} à \texttt{true}
+		\item Exemple de configuration YAML~:
+\begin{lstlisting}
+dashboard.widget.foobarWidget:
+  class: 'TYPO3\CMS\Dashboard\Widgets\RssWidget'
+  arguments:
+    $view: '@dashboard.views.widget'
+    $cache: '@cache.dashboard.rss'
+    $options:
+      rssFile: 'https://example.com/rss'
+      lifeTime: 3600
+      refreshAvailable: true
+  tags:
+    ...
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

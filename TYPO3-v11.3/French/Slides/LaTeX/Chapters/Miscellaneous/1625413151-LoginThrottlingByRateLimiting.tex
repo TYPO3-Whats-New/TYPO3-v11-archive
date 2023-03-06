@@ -1,0 +1,28 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93825 | Introduce rate limiter component
+% https://forge.typo3.org/issues/93825
+% https://review.typo3.org/c/Packages/TYPO3.CMS/+/68624
+
+\begin{frame}[fragile]
+	\frametitle{Divers}
+	\framesubtitle{Protection de l'authentification}
+
+	\begin{itemize}
+		\item TYPO3 limite les authentifications backend et frontend avec la bibliothèque Symfony
+			«~\href{https://symfony.com/doc/current/rate_limiter.html}{Rate Limiter}~»
+		\item Un middleware PSR-15 utilise la limitation de rythme pour bloquer les tentatives de connexion
+			si trop d'échecs depuis la même adresse IP sont détectés
+		\item Cette approche remplace l'ancienne solution qui n'était pas à la pointe d'un point de vue sécurité
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-93825-IntroduceRateLimiterComponent.html}{journal des changements (en)}
+			pour les options de configurations, les valeurs par défaut et plus de détails
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

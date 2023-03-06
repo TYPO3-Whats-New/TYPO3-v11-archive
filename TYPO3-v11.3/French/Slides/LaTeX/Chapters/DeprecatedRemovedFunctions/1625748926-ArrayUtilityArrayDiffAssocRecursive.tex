@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94137 | Switch behavior of ArrayUtility::arrayDiffAssocRecursive()
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Méthode \texttt{arrayDiffAssocRecursive()}}
+
+	\begin{itemize}
+		\item Le comportement de la méthode suivante a changé~:\newline
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Utility\textbackslash
+				ArrayUtility::arrayDiffAssocRecursive()}\normalsize
+		\item Comme le nom le suggère, elle reproduit le comportement de la fonction PHP
+			\texttt{array\_diff\_assoc()}
+		\item Il est nécessaire d'activer le comportement à l'aide du troisième paramètre à
+			\texttt{true} pour la compatibilité
+			(\texttt{\$useArrayDiffAssocBehavior})
+		\item Les développeurs qui nécessitent le comportement de la fonction PHP
+			\texttt{array\_diff\_key()} devraient utiliser la méthode
+			\texttt{arrayDiffKeyRecursive()} de la même classe
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

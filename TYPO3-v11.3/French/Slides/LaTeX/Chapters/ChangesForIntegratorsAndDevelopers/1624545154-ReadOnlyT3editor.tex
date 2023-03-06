@@ -1,0 +1,34 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 94081 | TCA readOnly for t3editor
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{TCA~: \texttt{t3editor}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item L'option TCA \texttt{readOnly} est ajoutée au type de rendu «~t3editor~»
+			pour empêcher les utilisateurs de modifier le contenu
+		\item Exemple de code TCA~:
+\begin{lstlisting}
+'config' => [
+  'type' => 'text',
+  'renderType' => 't3editor',
+  'format' => 'html',
+  'readOnly' => true
+]
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

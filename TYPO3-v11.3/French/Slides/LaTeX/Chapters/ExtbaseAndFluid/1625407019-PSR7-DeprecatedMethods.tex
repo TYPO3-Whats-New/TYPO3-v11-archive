@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94223 | Extbase Request->getBaseUri()
+% Deprecation | 94228 | Deprecate extbase request getRequestUri()
+% Deprecation | 94394 | Extbase Request setDispatched() and isDispatched()
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Requête/Réponse PSR-7 (3)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Inclus dans ce changement, la classe suivante est rationalisée~:\newline
+			\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Extbase\textbackslash
+				Mvc\textbackslash
+				Request}
+		\item Méthodes marquées \textbf{dépréciées}~:
+			\begin{itemize}
+				\item \texttt{getBaseUri()}\newline
+					\smaller(migration possible~: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\small
+				\item \texttt{getRequestUri()}\newline
+					\smaller(migration possible~: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\small
+				\item \texttt{setDispatched()} et \texttt{isDispatched()}\newline
+					\smaller(voir le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94394-ExtbaseRequestSetDispatchedAndIsDispatched.html}{journal des changements (en)} pour les options de migration)\small
+			\end{itemize}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

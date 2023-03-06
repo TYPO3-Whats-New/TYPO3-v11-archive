@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 94231 | Deprecate extbase InvalidRequestMethodException
+% Deprecation | 94367 | extbase ReferringRequest
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Requête/Réponse PSR-7 (4)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Comme la méthode \texttt{setMethod()} est retirée,
+			cette exception n'est plus disponible~:
+\begin{lstlisting}
+\TYPO3\CMS\Extbase\Mvc\Exception\InvalidRequestMethodException
+\end{lstlisting}
+
+		\item Aussi, cette classe est marquée \textbf{dépréciée}~:
+\begin{lstlisting}
+\TYPO3\CMS\Extbase\Mvc\Web\ReferringRequest
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
