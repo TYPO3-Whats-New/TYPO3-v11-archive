@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 29342 | Improve ValidatorTask
+
+\begin{frame}[fragile]
+	\frametitle{Divers}
+	\framesubtitle{Validateur de liens (1)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item La tâche du planificateur pour générer un rapport par email à propos des
+			liens brisés est significativement retravaillée et améliorée~:
+
+			\begin{itemize}
+				\item Les emails basés sur Fluid sont utilisés
+				\item La configuration de la tâche étendue
+				\item Les rapports contiennent plus d'information
+				\item Code refait
+			\end{itemize}
+
+		\item En supplément, un événement PSR-14 est introduit permettant aux développeurs
+			de manipuler le résultat de l'analyseur de lien.
+
+		\item Consultez le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Feature-29342-ImproveValidatorTask.html}{journal des changements (en)}
+			pour plus d'informations.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

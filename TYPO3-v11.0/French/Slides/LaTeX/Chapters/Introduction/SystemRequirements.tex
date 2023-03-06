@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% System Requirements
+
+\begin{frame}[fragile]
+	\frametitle{Introduction}
+	\framesubtitle{Prérequis systèmes}
+
+	\begin{itemize}
+		\item Version de PHP~: 7.4+
+		\item Configuration PHP~:
+
+			\begin{itemize}
+				\item \texttt{memory\_limit} >= 256M
+				\item \texttt{max\_execution\_time} >= 240s
+				\item \texttt{max\_input\_vars} >= 1500
+				\item L'option de compilation \texttt{-}\texttt{-disable-ipv6}
+				\underline{NE} doit \underline{PAS} être utilisée
+			\end{itemize}
+
+		\item La majorité des serveurs de base de données supportés par \textbf{Doctrine DBAL}
+			fonctionnent avec TYPO3. Les moteurs testés sont par exemple~:
+	\end{itemize}
+
+	\begin{figure}
+		\includegraphics[width=0.80\linewidth]{Introduction/logo-databases.png}
+	\end{figure}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

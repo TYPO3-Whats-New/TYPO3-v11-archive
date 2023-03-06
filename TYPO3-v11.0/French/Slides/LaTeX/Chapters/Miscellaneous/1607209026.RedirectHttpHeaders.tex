@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 92334 | X-Redirect-By Header for pages with redirect types
+
+\begin{frame}[fragile]
+	\frametitle{Divers}
+	\framesubtitle{En-tête X-Redirect-By}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Lors des redirections, TYPO3 transmet un en-tête HTTP supplémentaire pour indiquer
+			quel type de page a déclenché la redirection~:
+			\begin{itemize}\small
+				\item Raccourcis
+				\item Pages de point de montage (lorsqu'applicable)
+				\item Lien vers une adresse externe
+			\end{itemize}\normalsize
+		\item Si activé dans la configuration globale, l'identifiant de la page est ajouté à la sortie
+			(ne devrait être activé que pour l'analyse)~:
+\begin{lstlisting}
+# See: $GLOBALS['TYPO3_CONF_VARS']['FE']['exposeRedirectInformation']
+
+# exposeRedirectInformation is disabled:
+X-Redirect-By: TYPO3 External URL
+# exposeRedirectInformation is enabled:
+X-Redirect-By: TYPO3 External URL at page with ID 456
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

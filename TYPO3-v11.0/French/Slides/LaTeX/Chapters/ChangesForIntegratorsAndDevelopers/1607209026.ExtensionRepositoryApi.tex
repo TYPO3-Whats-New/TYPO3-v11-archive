@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 92457 | Improved Extension Repository API
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Dépôt d'extensions externe}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	% \lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Le gestionnaire d'extensions utilise la \textbf{Extension Remotes API}.
+		\item Précédemment, les alternatives au dépôt d'extensions de TYPO3 (TER)
+			étaient enregistrées en base de données.
+		\item Il est toujours possible de définir de nouveaux dépôts externes,
+			de les désactiver ou de changer celui par défaut.
+		\item Les dépôts externes se configurent dans le fichier
+			\small\texttt{Configuration/Services.yaml}, par exemple~:
+\begin{lstlisting}
+extension.remote.myremote:
+  class: 'TYPO3\CMS\Extensionmanager\Remote\TerExtensionRemote'
+  arguments:
+    $identifier: 'myremote'
+    $options:
+       remoteBase: 'https://example.com/'
+  tags:
+    - name: 'extension.remote'
+      default: true
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

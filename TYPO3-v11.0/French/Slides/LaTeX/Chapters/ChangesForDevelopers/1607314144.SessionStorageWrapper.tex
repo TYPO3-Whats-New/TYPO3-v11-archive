@@ -1,0 +1,46 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 91738 | Introduce wrapper for sessionStorage
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Session Storage Wrapper}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Une classe d'encapsulation pour enregistrer des informations temporairement
+			pendant la durée d'une session~:
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Storage\textbackslash
+				BrowserSession}\normalsize
+		\item Les méthodes d'API suivantes sont disponibles~:
+			\vspace{0.1cm}
+			\begin{itemize}\smaller
+				\item \texttt{get(key)}\newline
+					Pour récupérer les données d'une clé.
+				\item \texttt{set(key, value)}\newline
+					Pour définir/surcharger une clé avec du contenu arbitraire.
+				\item \texttt{isset(key)}\newline
+					Pour vérifier si une clé est utilisée.
+				\item \texttt{unset(key)}\newline
+					Pour retirer une clé du stockage.
+				\item \texttt{clear()}\newline
+					Pour vider le stockage et effacer les données.
+				\item \texttt{unsetByPrefix(prefix)}\newline
+				 	Pour supprimer les données associées aux clés commençant par le préfixe spécifié.
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

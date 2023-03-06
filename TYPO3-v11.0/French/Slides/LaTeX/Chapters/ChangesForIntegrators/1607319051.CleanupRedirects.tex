@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 91712 | Redirect Module: cleanup scheduler task and CLI command
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Nettoyage des redirections}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Une commande CLI est ajoutée pour supprimer les redirections correspondant à certains critères~:
+			\begin{itemize}
+				\item Âge des enregistrements en jour
+				\item Domaine(s), séparés par des virgules
+				\item Nombre de visites
+				\item Code(s) d'état, séparés par des virgules
+				\item Motif du chemin
+			\end{itemize}
+		\item La commande est utilisable depuis le planificateur de tâches.
+		\item Les redirections peuvent être marquées «~protégée~» pour empêcher la suppression.
+		\item Par exemple~:
+\begin{lstlisting}
+vendor/bin/typo3 redirects:cleanup --age 90 --path "/foobar%"
+\end{lstlisting}
+
+			\smaller
+				(toutes les redirections commençant par \texttt{/foobar} et ayant plus de 90 jours)
+			\normalsize
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

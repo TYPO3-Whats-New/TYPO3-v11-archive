@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% 91606 | Flatpickr
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Nouveau sélecteur de date et heure~: "flatpickr"}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Le sélecteur de date et heure du backend TYPO3 est remplacé~:\newline
+			"\href{https://flatpickr.js.org/}{flatpickr}"
+			est «~lean~», léger et dépend d'aucune bibliothèque.
+		\item Ce changement a de nombreuses implications, surtout pour les développeurs~:
+
+			\begin{itemize}\small
+				\item Initialiser tous les sélecteurs de date en même temps déclenche un avertissement de dépréciation~:\newline
+					\texttt{DateTimePicker.initialize()}.
+				\item L'option pour ajouter/retirer un intervalle de date ou d'heure est retirée de FormEngine.
+			\end{itemize}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

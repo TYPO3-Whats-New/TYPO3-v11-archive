@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 93041 | Remove TypoScript option addQueryString.method
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Option TypoScript \texttt{addQueryString.method}}
+
+	\begin{itemize}
+		\item L'option TypoScript \texttt{addQueryString.method} est retirée.
+		\item L'impact est le suivant~:
+
+			\begin{itemize}\smaller
+				\item \texttt{UriBuilder->setAddQueryStringMethod()} déclenche une notice de dépréciation.
+				\item Appeler \texttt{ContentObjectRenderer->getQueryArguments()} avec plus d'un argument n'a plus d'effet.
+			\end{itemize}\normalsize
+
+		\item De plus, utiliser l'argument \texttt{addQueryStringMethod} dans
+			ces ViewHelpers déclenche une notice de dépréciation~:
+
+			\begin{itemize}\smaller
+				\item \texttt{<f:form>}
+				\item \texttt{<f:link.action>}
+				\item \texttt{<f:link.page>}
+				\item \texttt{<f:link.typolink>}
+				\item \texttt{<f:uri.action>}
+				\item \texttt{<f:uri.page>}
+				\item \texttt{<f:uri.typolink>}
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

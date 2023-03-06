@@ -1,0 +1,55 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 92791 | New Placeholder records removed in Workspaces
+% Breaking | 92497 | Workspaces: Move Placeholders removed
+% Breaking | 92206 | Remove workspace swapping of elements
+% Breaking | 92598 | Workspace-overlays auto-fix the PID value for moved records
+% Deprecation | 92598 | Workspace-related methods fixVersioningPid
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Espaces de travail}
+
+	\begin{itemize}
+		\item Nombreux changements internes sont réalisés sur les espaces de travail.
+		\item Les développeurs dont les extensions les utilisent sont invités à consulter les changements
+			et tester leur code.
+		\item Les changements sont par exemple (et non limité à)~:
+
+			\begin{itemize}\small
+				\item L'enregistrement de substitution d'un nouvel enregistrement est retiré
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92791-NewPlaceholderRecordsRemovedInWorkspaces.html}{92791}).
+				\item L'enregistrement de substitution d'un déplacement est retiré
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92497-WorkspacesMovePlaceholdersRemoved.html}{92497}).
+				\item Le mode d'échange des enregistrements est retiré
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92206-RemoveWorkspaceSwappingOfElements.html}{92206}).
+				\item The champ \texttt{\_ORIG\_pid} change de sens
+					(\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Breaking-92598-Workspace-overlaysAuto-fixThePIDValueForMovedRecords.html}{92598}).
+			\end{itemize}
+
+		\item Ces méthodes sont marquées dépréciées~:
+
+			\begin{itemize}\smaller
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Domain\textbackslash
+					Repository\textbackslash
+					PageRepository->fixVersioningPid()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Utility\textbackslash
+					BackendUtility::fixVersioningPid()}
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

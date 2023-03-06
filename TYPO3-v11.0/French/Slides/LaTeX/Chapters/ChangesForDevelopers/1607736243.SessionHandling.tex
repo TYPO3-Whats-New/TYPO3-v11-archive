@@ -1,0 +1,45 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93023 | Introduce UserSession and UserSessionManager
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Gestion de session}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item La gestion de la session dans le noyau de TYPO3 est significativement restructurée.
+		\item Elle ne fait plus partie de l'authentification utilisateur.
+			Elle est déplacée dans des classes dédiées~:
+
+			\begin{itemize}\small
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Session\textbackslash
+					UserSession}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Session\textbackslash
+					UserSessionManager}
+			\end{itemize}
+
+		\item Ce changement amène à la centralisation de la gestion des sessions.
+		\item Le \texttt{UserSessionManager} doit être utilisé pour créer de nouvelles sessions
+			dans différents cas.
+		\item Consultez la
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SessionStorageFramework/Index.html}{documentation TYPO3 (en)}
+			pour plus d'informations.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,37 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 92423 | Enable placeholder config for ckeditor
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Plugin CKEditor "Placeholder"}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Nouveau plugin CKEditor disponible~:
+			«~\href{https://ckeditor.com/docs/ckeditor4/latest/examples/editorplaceholder.html}{Editor Placeholder}~»
+		\item Il affiche un texte de substitution lorsque le contenu de l'éditeur est vide
+		\item Exemple de configuration TCA~:
+\begin{lstlisting}
+'bodytext' => [
+  'label' => 'LLL:EXT:core/Resources/Private/Language/ ...',
+  'config' => [
+    'placeholder' => 'This is a placeholder',
+    'type' => 'text',
+    'enableRichtext' => true
+  ]
+]
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

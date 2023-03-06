@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 92784 | Extbase controller actions must return ResponseInterface
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{PSR-7 \texttt{ResponseInterface}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item L'objectif de conformité complète avec PSR-7 affecte le type de retour
+			des actions des contrôleurs.
+		\item Les valeurs de retour pouvaient être rien (\small\texttt{void}\normalsize),
+			\small\texttt{null}\normalsize, une chaîne, ou un objet.
+		\item Les actions doivent retourner une instance de
+			\smaller\texttt{Psr\textbackslash
+				Http\textbackslash
+				Message\textbackslash
+				ResponseInterface}.\normalsize
+		\item Tout autre élément déclenche un avertissement de dépréciation.
+		\item Exemple (après migration)~:
+\begin{lstlisting}
+public function listAction(): ResponseInterface
+{
+  $items = $this->itemRepository->findAll();
+  $this->view->assign('items', $items);
+  return $this->htmlResponse();
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Installation using Composer
+
+\begin{frame}[fragile]
+	\frametitle{Installation and Upgrade}
+	\framesubtitle{Installation avec \texttt{composer}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Installation avec \href{https://getcomposer.org}{PHP Composer} sous Linux, Mac OS X et Windows 10~:
+\begin{lstlisting}
+$ cd /var/www/site/
+$ composer create-project typo3/cms-base-distribution typo3v11 ^11
+\end{lstlisting}
+
+		\item Vous pouvez aussi créer votre ficher \texttt{composer.json} sur mesure
+			et exécuter~:
+\begin{lstlisting}
+$ composer install
+\end{lstlisting}
+
+		\item L'outils en ligne \href{https://get.typo3.org/misc/composer/helper}{Composer Helper (en)}
+			aide la sélection des paquets.
+
+		\item Plus de détails disponibles dans le
+			\href{https://docs.typo3.org/m/typo3/guide-installation/master/en-us/}{Guide d'installation et mise à jour (en)}.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

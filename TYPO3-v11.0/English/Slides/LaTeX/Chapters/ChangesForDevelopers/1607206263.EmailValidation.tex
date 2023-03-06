@@ -1,0 +1,65 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92531 | Improved Email Validation
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Developers}
+	\framesubtitle{Email Validation}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Developers can use the following method to validate email addresses:
+			\newline\smaller
+				\texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Utility\textbackslash
+					GeneralUtility::validEmail()}\normalsize
+
+		\item Since TYPO3 v11.0, it is possible to configure the validators
+			and to implement custom solutions.
+
+		\item For example:
+\begin{lstlisting}
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['validators'] = [
+  \Egulias\EmailValidator\Validation\RFCValidation::class,
+  \Egulias\EmailValidator\Validation\DNSCheckValidation::class
+];
+\end{lstlisting}
+
+		\item The following default validators are available:
+			\begin{itemize}\smaller
+				\item \texttt{\textbackslash
+					Egulias\textbackslash
+					EmailValidator\textbackslash
+					Validation\textbackslash
+					RFCValidation} (used by default)
+				\item \texttt{\textbackslash
+					Egulias\textbackslash
+					EmailValidator\textbackslash
+					Validation\textbackslash
+					DNSCheckValidation}
+				\item \texttt{\textbackslash
+					Egulias\textbackslash
+					EmailValidator\textbackslash
+					Validation\textbackslash
+					SpoofCheckValidation}
+				\item \texttt{\textbackslash
+					Egulias\textbackslash
+					EmailValidator\textbackslash
+					Validation\textbackslash
+					NoRFCWarningsValidation}
+			\end{itemize}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,97 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 92132 | Deprecated shortcut PHP API
+% Deprecation | 93093 | Deprecate MethodName in Shortcut PHP API
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Raccourcis backend et favoris}
+
+	\begin{itemize}
+		\item Ces méthodes liées à la gestion des raccourcis/favoris dans
+			le backend TYPO3 sont marquées dépréciées~:
+			\vspace{0.2cm}
+			\begin{itemize}\tiny
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					ModuleTemplate->makeShortcutIcon()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					ModuleTemplate->makeShortcutUrl()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					Components\textbackslash
+					Buttons\textbackslash
+					Action\textbackslash
+					ShortcutButton->getSetVariables()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					Components\textbackslash
+					Buttons\textbackslash
+					Action\textbackslash
+					ShortcutButton->getGetVariables()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					Components\textbackslash
+					Buttons\textbackslash
+					Action\textbackslash
+					ShortcutButton->setGetVariables()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					Components\textbackslash
+					Buttons\textbackslash
+					Action\textbackslash
+					ShortcutButton->setSetVariables()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					Components\textbackslash
+					Buttons\textbackslash
+					Action\textbackslash
+					ShortcutButton->setModuleName()}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Backend\textbackslash
+					Template\textbackslash
+					Components\textbackslash
+					Buttons\textbackslash
+					Action\textbackslash
+					ShortcutButton->getModuleName()}
+			\end{itemize}\normalsize
+
+		\item Ce ViewHelper Fluid est marqué déprécié~:
+
+			\begin{itemize}\smaller
+				\item \texttt{f:be.buttons.shortcut}
+			\end{itemize}\normalsize
+
+		\item En supplément, l'argument \texttt{getVars} du ViewHelper suivant
+			est marqué déprécié~:
+
+			\begin{itemize}\smaller
+				\item \texttt{be:moduleLayout.button.shortcutButton}
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

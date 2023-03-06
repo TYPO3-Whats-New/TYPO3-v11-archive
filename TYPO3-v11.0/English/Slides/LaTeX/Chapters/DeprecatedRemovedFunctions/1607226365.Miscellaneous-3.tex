@@ -1,0 +1,54 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 92583 | Deprecate last arguments of wrapClickMenuOnIcon()
+% Deprecation | 92551 | GeneralUtility methods related to pagesl18n_cfg behavior
+% Deprecation | 92062 | Migrate RecordListController hooks to an PSR-14 event
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Miscellaneous (3)}
+
+	\begin{itemize}
+		\item Calling \texttt{BackendUtility::wrapClickMenuOnIcon()} with more
+			than four arguments will trigger a deprecation warning now.
+		\item The following methods have been marked as deprecated:
+			\begin{itemize}\smaller
+				\item \texttt{GeneralUtility::hideIfNotTranslated()}
+				\item \texttt{GeneralUtility::hideIfDefaultLanguage()}
+			\end{itemize}\normalsize
+			\small
+				Use the following BitSet-based PHP class instead:\newline
+				\smaller\texttt{
+					TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Type\textbackslash
+					Bitmask\textbackslash
+					PageTranslationVisibility}
+			\normalsize
+
+		\item The following hooks have been marked as deprecated:
+			\begin{itemize}\smaller
+				\item \texttt{['recordlist/Modules/Recordlist/index.php']['drawHeaderHook']}
+				\item \texttt{['recordlist/Modules/Recordlist/index.php']['drawFooterHook']}
+			\end{itemize}\normalsize
+			\small
+				Use the following PSR-14 event instead:\newline
+				\smaller\texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Recordlist\textbackslash
+					Event\textbackslash
+					RenderAdditionalContentToRecordListEvent}
+			\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

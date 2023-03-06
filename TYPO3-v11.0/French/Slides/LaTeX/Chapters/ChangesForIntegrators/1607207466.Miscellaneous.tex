@@ -1,0 +1,31 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Important | 92870 | Always use Fluid based page module
+% Important | 91888 | System extension about merged into backend system extension
+% Breaking | 92940 | Global option lockBeUserToDBmounts removed
+% Breaking | 92837 | Removed setting mod.web_layout.disableAdvanced
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Divers}
+
+	\begin{itemize}
+		\item TYPO3 utilisant tous le temps le module page basé sur Fluid, la bascule
+			de fonctionnalité pour changer entre les différentes implémentations est retirée.
+		\item Toutes les fonctionnalités de l'extension système \texttt{EXT:about} sont
+			migrées dans l'extension backend principale et l'extension est retirée.
+		\item Le paramètre global suivant est retiré pour renforcer la sécurité
+			(il est considéré toujours actif)~:\newline
+			\smaller\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['BE']['lockBeUserToDBmounts']}\normalsize
+		\item Le paramètre TSconfig suivant est retiré~:\newline
+			\smaller\texttt{mod.web\_layout.disableAdvanced}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

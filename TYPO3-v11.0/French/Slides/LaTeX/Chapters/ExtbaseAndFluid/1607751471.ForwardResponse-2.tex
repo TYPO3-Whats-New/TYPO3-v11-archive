@@ -1,0 +1,48 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 92815 | Introduce ForwardResponse for extbase
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{PSR-7 \texttt{ForwardResponse} (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Exemple~:
+\begin{lstlisting}
+<?php
+
+use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Http\ForwardResponse;
+
+class FooController extends ActionController
+{
+  public function listAction(): ResponseInterface
+  {
+    // do something
+    return new ForwardResponse('show');
+  }
+
+  public function showAction(): ResponseInterface
+  {
+    // do something
+  }
+}
+\end{lstlisting}
+
+		\item Consultez le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.0/Deprecation-92784-ExtbaseControllerActionsMustReturnResponseInterface.html}{journal des changements}
+			pour plus d'informations.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

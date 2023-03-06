@@ -1,0 +1,34 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 87301 | Secure cookies enabled by default
+% Breaking | 92807 | Removed feature for keeping session data on frontend user logout
+
+\begin{frame}[fragile]
+	\frametitle{Divers}
+	\framesubtitle{Sécurité}
+
+	\begin{itemize}
+		\item Pour améliorer la sécurité, TYPO3 v11 n'expose pas le même cookie
+			pour les connexions HTTP et HTTPS, si l'instance est dans un contexte HTTPS.
+
+			\begin{itemize}
+				\item Si le site utilise HTTPS~: le cookie n'est exposé que par HTTPS.
+				\item Si le site utilise HTTP~: le cookie est disponible par HTTP et HTTPS.
+			\end{itemize}
+
+			Inclus dans ce changement, cette configuration globale est retirée~:
+		 	\smaller\texttt{\$TYPO3\_CONF\_VARS[SYS][cookieSecure]}\normalsize
+
+		\item TYPO3 retire toutes les données de session lors de la déconnexion de l'utilisateur frontend\newline
+			\small(les installations qui comptent sur la non-suppression peuvent être affectées, i.e. pour la gestion d'un panier)\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

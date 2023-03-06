@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 91563 | PHP-based JS + CSS inclusions for Frontend removed
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les développeurs}
+	\framesubtitle{Inclusions JavaScript et CSS}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Les méthodes suivantes de la classe
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Frontend\textbackslash
+				Controller\textbackslash
+				TypoScriptFrontendController}\normalsize\newline
+			sont retirées~:
+
+			\begin{itemize}
+				\item \texttt{setJS()}
+				\item \texttt{additionalJavaScript}
+				\item \texttt{additionalCSS}
+				\item \texttt{JSCode}
+				\item \texttt{inlineJS}
+			\end{itemize}
+
+		\item Une meilleure approche pour ajouter des éléments JavaScript et CSS est d'utiliser
+			l'\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Assets/Index.html}{API AssetCollector}
+			par exemple.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

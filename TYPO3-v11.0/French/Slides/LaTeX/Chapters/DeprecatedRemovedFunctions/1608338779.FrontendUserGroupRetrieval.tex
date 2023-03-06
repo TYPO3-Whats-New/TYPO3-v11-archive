@@ -1,0 +1,49 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 93108 | Reworked internal user group fetching for frontend users
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Récupération des groupes d'utilisateur frontend}
+
+	\begin{itemize}
+		\item Le code pour récupérer les groupes de l'utilisateur frontend connecté
+			est rationalisé.
+		\item Il est devenu cohérent avec celui pour le backend.
+		\item Ces méthodes et propriétés sont retirées~:\newline
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Authentication\textbackslash
+				AuthenticationService}\normalsize
+
+			\begin{itemize}\smaller
+				\item \texttt{->getGroups()}
+				\item \texttt{->getSubGroups()}
+				\item \texttt{->db\_groups}
+			\end{itemize}\normalsize
+
+		\item Ces méthodes sont marquées internes ou retirées~:\newline
+			\smaller\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Authentication\textbackslash
+				FrontendUserAuthentication}\normalsize
+
+			\begin{itemize}\smaller
+				\item \texttt{->TSdataArray}
+				\item \texttt{->userTS}
+				\item \texttt{->userTSUpdated}
+				\item \texttt{->userData\_change}
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

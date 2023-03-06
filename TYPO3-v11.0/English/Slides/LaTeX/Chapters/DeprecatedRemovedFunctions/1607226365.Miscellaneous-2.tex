@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 92607 | Deprecated GeneralUtility::uniqueList
+% Breaking | 93062 | Various group-related public properties in BE_USER removed
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Miscellaneous (2)}
+
+	\begin{itemize}
+		\item The following methods of the \texttt{ReferenceIndex} class have been marked as deprecated:
+			\begin{itemize}\smaller
+				\item \texttt{ReferenceIndex->enableRuntimeCache()}
+				\item \texttt{ReferenceIndex->disableRuntimeCache()}
+			\end{itemize}\normalsize
+
+		\item The following methods of the \texttt{BackendUserAuthentication} class have been removed:
+			\begin{itemize}\smaller
+				\item \texttt{BackendUserAuthentication->groupList}
+				\item \texttt{BackendUserAuthentication->includeGroupArray}
+			\end{itemize}\normalsize
+
+		\item The method \texttt{GeneralUtility::uniqueList()} has been marked as deprecated
+			(use the new method \smaller\texttt{StringUtility::uniqueList()}\normalsize instead)
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 88276 | TypoScript Condition for page layout
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Condition TypoScript~: \texttt{pagelayout}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\tiny\ttfamily}
+
+	\begin{itemize}
+		\item Une condition TypoScript pour vérifier la disposition backend d'une page
+			est disponible en frontend et backend.
+		\item Par exemple~:
+\begin{lstlisting}
+# Using backend_layout records
+[tree.pagelayout == 2]
+  page.1 = TEXT
+  page.1.value = Layout 2
+[END]
+
+# Using TSconfig provider of backend layouts
+[tree.pagelayout == "pagets__Home"]
+  page.1 = TEXT
+  page.1.value = Layout Home
+[END]
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

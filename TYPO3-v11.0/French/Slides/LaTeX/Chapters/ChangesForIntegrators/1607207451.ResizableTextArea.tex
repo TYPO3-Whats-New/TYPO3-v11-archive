@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 92582 | Resizable text area user setting dropped
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Zones de texte redimensionnables}
+
+	\begin{itemize}
+		\item Le paramètre utilisateur «~\textbf{Rendre les zones de texte flexibles}~» étant retiré,
+			ces paramètres TSconfig utilisateur sont obsolètes~:
+
+			\begin{itemize}
+				\item \texttt{setup.default.resizeTextareas\_Flexible}
+				\item \texttt{setup.override.resizeTextareas\_Flexible}
+				\item \texttt{setup.fields.resizeTextareas\_Flexible.disabled}
+			\end{itemize}
+
+		\item Les intégrateurs TYPO3 doivent mettre à jour leur code TypoScript et retirer
+			ces paramètres, si présents.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

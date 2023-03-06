@@ -1,0 +1,53 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 92583 | Deprecate last arguments of wrapClickMenuOnIcon()
+% Deprecation | 92551 | GeneralUtility methods related to pagesl18n_cfg behavior
+% Deprecation | 92062 | Migrate RecordListController hooks to an PSR-14 event
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Divers (3)}
+
+	\begin{itemize}
+		\item Appeler \texttt{BackendUtility::wrapClickMenuOnIcon()} avec plus
+			de quatre arguments déclenche un avertissement de dépréciation.
+		\item Ces méthodes sont marquées dépréciées~:
+			\begin{itemize}\smaller
+				\item \texttt{GeneralUtility::hideIfNotTranslated()}
+				\item \texttt{GeneralUtility::hideIfDefaultLanguage()}
+			\end{itemize}\normalsize
+			\small
+				Utilisez la classe suivante basée sur BitSet à la place~:\newline
+				\smaller\texttt{
+					TYPO3\textbackslash
+					CMS\textbackslash
+					Core\textbackslash
+					Type\textbackslash
+					Bitmask\textbackslash
+					PageTranslationVisibility}
+			\normalsize
+
+		\item Ces hook sont marqués dépréciés~:
+			\begin{itemize}\smaller
+				\item \texttt{['recordlist/Modules/Recordlist/index.php']['drawHeaderHook']}
+				\item \texttt{['recordlist/Modules/Recordlist/index.php']['drawFooterHook']}
+			\end{itemize}\normalsize
+			\small
+				Utilisez cet événements PSR-14 à la place~:\newline
+				\smaller\texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Recordlist\textbackslash
+					Event\textbackslash
+					RenderAdditionalContentToRecordListEvent}
+			\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,52 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 92802 | User-database-based authentication timeout field removed
+% Breaking | 92801 | Removed Failed Login functionality from User Authentication object
+% Breaking | 92989 | AbstractUserAuthentication->loginFailure removed
+% Breaking | 92990 | AbstractUserAuthentication->svConfig removed
+% Breaking | 93073 | AbstractUserAuthentication->forceSetCookie removed
+% Deprecation | 93023 | Reworked session handling
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Classe \texttt{AbstractUserAuthentication}}
+
+	\begin{itemize}
+		\item Les changements suivants concernent la classe\newline
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Authentication\textbackslash
+				AbstractUserAuthentication}\normalsize
+
+		\item Propriétés et méthodes publiques retirées~:
+
+			\begin{itemize}\smaller
+				\item \texttt{AbstractUserAuthentication->auth\_timeout\_field}
+				\item \texttt{AbstractUserAuthentication->loginFailure}
+				\item \texttt{AbstractUserAuthentication->forceSetCookie}
+				\item \texttt{AbstractUserAuthentication->svConfig}
+				\item \texttt{AbstractUserAuthentication->warningEmail}
+				\item \texttt{AbstractUserAuthentication->warningPeriod}
+				\item \texttt{AbstractUserAuthentication->warningMax}
+				\item \texttt{AbstractUserAuthentication->checkLogFailures()}
+			\end{itemize}\normalsize
+
+		\item Faisant partie de la restructuration de la gestion des sessions, ces méthodes sont marquées dépréciées~:
+
+			\begin{itemize}\smaller
+				\item \texttt{AbstractUserAuthentication->createSessionId()}
+				\item \texttt{AbstractUserAuthentication->fetchUserSession()}
+			\end{itemize}\normalsize
+
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

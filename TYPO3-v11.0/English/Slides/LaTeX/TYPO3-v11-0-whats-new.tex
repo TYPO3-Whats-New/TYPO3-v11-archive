@@ -1,0 +1,170 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11.0 - What's New}
+\subtitle{Summary of the new features, changes and improvements}
+\author{
+	\centerline{Created by:}
+	\centerline{Michael Schams}
+}
+
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11.0 - What's New}
+\begin{frame}[fragile]
+	\frametitle{Chapter Overview}
+	\framesubtitle{Chapter Overview}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+\include{Chapters/Introduction/TheFacts}
+\include{Chapters/Introduction/ExecutiveSummary}
+\include{Chapters/Introduction/SystemRequirements}
+\include{Chapters/Introduction/DevelopmentTimeline}
+\include{Chapters/Introduction/ReleaseDates}
+\include{Chapters/Introduction/InstallationTraditional}
+\include{Chapters/Introduction/InstallationComposer}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+\include{Chapters/BackendUserInterface/1607207249.BootstrapVersion5}
+\include{Chapters/BackendUserInterface/1607207274.ResizableTextArea}
+\include{Chapters/BackendUserInterface/1607220455.SystemNotesButton}
+\include{Chapters/BackendUserInterface/1607313678.DateTimePicker}
+\include{Chapters/BackendUserInterface/1607319051.CleanupRedirects}
+\include{Chapters/BackendUserInterface/1607724330.DeletePagesRecursively}
+\include{Chapters/BackendUserInterface/1607753890.ContextMenuAccessibleByKeyboard}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607207373.FormFramework}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607209026.ExtensionRepositoryApi}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607210238.ExpandSelectCheckBox}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607211972.CKEditorPluginPlaceholder}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607215823.ExtendableConfigurationModule}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607722445.Flatpickr}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607724330.DeletePagesRecursively}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1607758293.AddQueryStringMethod}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1608170030.Workspaces}
+
+% Chapter "Changes for Integrators"
+\include{Chapters/ChangesForIntegrators/ChapterTitle}
+\include{Chapters/ChangesForIntegrators/BreakingChangesInfo}
+\include{Chapters/ChangesForIntegrators/1607207417.ExtensionManager}
+\include{Chapters/ChangesForIntegrators/1607207451.ResizableTextArea}
+\include{Chapters/ChangesForIntegrators/1607319051.CleanupRedirects}
+\include{Chapters/ChangesForIntegrators/1607732861.PageLayoutTypoScriptCondition}
+\include{Chapters/ChangesForIntegrators/1607733425.LockIpRemoved}
+\include{Chapters/ChangesForIntegrators/1607735828.AdminPanelHiddenUserGroups}
+\include{Chapters/ChangesForIntegrators/1608090165.TemplateContentObject}
+\include{Chapters/ChangesForIntegrators/1608340310.BackendUrlRewrites-1}
+\include{Chapters/ChangesForIntegrators/1608340310.BackendUrlRewrites-2}
+\include{Chapters/ChangesForIntegrators/1607207466.Miscellaneous}
+
+% Chapter "Changes for Developers"
+\include{Chapters/ChangesForDevelopers/ChapterTitle}
+\include{Chapters/ChangesForDevelopers/BreakingChangesInfo}
+\include{Chapters/ChangesForDevelopers/1607207519.DateTimeAspect}
+\include{Chapters/ChangesForDevelopers/1607206263.EmailValidation}
+\include{Chapters/ChangesForDevelopers/1607214783.PageLanguageDetection}
+\include{Chapters/ChangesForDevelopers/1607217779.FrontendUserGroups}
+\include{Chapters/ChangesForDevelopers/1607230204.PhpBasedJavaScriptAndCssInclusions}
+\include{Chapters/ChangesForDevelopers/1607312249.BackendLinkUriViewHelper}
+\include{Chapters/ChangesForDevelopers/1607314144.SessionStorageWrapper}
+\include{Chapters/ChangesForDevelopers/1607728049.RedirectMiddlewarePosition}
+\include{Chapters/ChangesForDevelopers/1607736243.SessionHandling}
+\include{Chapters/ChangesForDevelopers/1607754653.AppendCookieToResponse}
+\include{Chapters/ChangesForDevelopers/1607755344.PSR7inFrontendContentObjects-1}
+\include{Chapters/ChangesForDevelopers/1607755344.PSR7inFrontendContentObjects-2}
+\include{Chapters/ChangesForDevelopers/1607909671.PageRenderer}
+\include{Chapters/ChangesForDevelopers/1608167888.ShortcutAPI}
+
+% Chapter "Extbase and Fluid"
+\include{Chapters/ExtbaseAndFluid/ChapterTitle}
+\include{Chapters/ExtbaseAndFluid/1607207528.PSR7Responses}
+\include{Chapters/ExtbaseAndFluid/1607218870.RegularExpressionValidator}
+\include{Chapters/ExtbaseAndFluid/1607227727.FluidWidgets}
+\include{Chapters/ExtbaseAndFluid/1607746695.ActionController}
+\include{Chapters/ExtbaseAndFluid/1607751471.ForwardResponse-1}
+\include{Chapters/ExtbaseAndFluid/1607751471.ForwardResponse-2}
+\include{Chapters/ExtbaseAndFluid/1607832451.ActionsMustReturnResponseInterface}
+\include{Chapters/ExtbaseAndFluid/1608082368.PropertyDependencyInjection-1}
+\include{Chapters/ExtbaseAndFluid/1608084687.PropertyDependencyInjection-2}
+\include{Chapters/ExtbaseAndFluid/1608081221.PluginAndModuleRegistration}
+\include{Chapters/ExtbaseAndFluid/1607322346.Miscellaneous}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+\include{Chapters/DeprecatedRemovedFunctions/1607231144.Typo3ModeAndRequestTypeConstants}
+\include{Chapters/DeprecatedRemovedFunctions/1607207557.DatabaseRelatedChanges}
+\include{Chapters/DeprecatedRemovedFunctions/1607213696.StyleAndLinkTagsWithoutTypeAttribute}
+\include{Chapters/DeprecatedRemovedFunctions/1607736243.SessionHandling}
+\include{Chapters/DeprecatedRemovedFunctions/1608338779.FrontendUserGroupRetrieval}
+\include{Chapters/DeprecatedRemovedFunctions/1607757344.BackendShortcutAndBookmark}
+\include{Chapters/DeprecatedRemovedFunctions/1607831827.AbstractUserAuthentication}
+\include{Chapters/DeprecatedRemovedFunctions/1608087246.Workspaces}
+\include{Chapters/DeprecatedRemovedFunctions/1607226365.Miscellaneous-1}
+\include{Chapters/DeprecatedRemovedFunctions/1607226365.Miscellaneous-2}
+\include{Chapters/DeprecatedRemovedFunctions/1607226365.Miscellaneous-3}
+
+% Chapter "Miscellaneous"
+\include{Chapters/Miscellaneous/ChapterTitle}
+\include{Chapters/Miscellaneous/1607209026.RedirectHttpHeaders}
+\include{Chapters/Miscellaneous/1607212652.LinkValidator-1}
+\include{Chapters/Miscellaneous/1607212652.LinkValidator-2}
+\include{Chapters/Miscellaneous/1607219624.Security}
+\include{Chapters/Miscellaneous/1607207578.Miscellaneous}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewTeam}
+
+% ------------------------------------------------------------------------------
+\end{document}

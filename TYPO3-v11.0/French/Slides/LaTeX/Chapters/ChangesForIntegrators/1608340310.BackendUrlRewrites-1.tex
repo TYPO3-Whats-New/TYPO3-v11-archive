@@ -1,0 +1,31 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 93048 | Backend URL rewrites
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Adresses Backend (1)}
+
+	\begin{itemize}
+		\item Les adresses du Backend sont changées dans TYPO3 v11~:\newline
+			\small
+				\textbf{ANCIEN~:}\tabto{1.7cm}\texttt{/typo3/index.php?route=\%2Frecord\%2Fedit\&token=...}\newline
+				\textbf{NOUVEAU~:}\tabto{1.7cm}\texttt{/typo3/record/edit?token=...}
+			\normalsize
+
+		\item C'est en préparation des adresses réécrites et des liaisons profondes du
+			backend TYPO3.
+		\item Pour accéder au backend TYPO3, la configuration du serveur web nécessite une règle de réécriture.
+		\item Précédemment, le backend était exclus explicitement de la logique de réécriture.
+		\item Lors de l'accès à l'outils d'installation et si possible, une mise à jour silencieuse prend
+			en charge l'ajustement du fichier de configuration pour Apache et Microsoft IIS.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,43 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 92457 | Extension Repository database table removed
+% Feature | 92538 | Show extension constraints in extension manager
+% Breaking | 92532 | Support for extension-in-extension installation in Extension Manager removed
+% Breaking | 92590 | Removed support for extension upload of t3x files
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs}
+	\framesubtitle{Gestionnaire d'extensions}
+
+	\begin{itemize}
+
+		\item Le gestionnaire d'extension fournit une vue \textit{toutes les versions}
+			affichant des informations détaillées à propos des extensions.
+
+		\item La table de base de données suivante n'est plus utilisée et est retirée~:
+			\begin{itemize}\small
+				\item \texttt{tx\_extensionmanager\_domain\_model\_repository}
+			\end{itemize}\normalsize
+			\vspace{0.2cm}
+
+		\item La prise en charge (non documentée) d'installation d'extension dans une extension
+			est retirée. TYPO3 ignore le dossier suivant~:
+			\begin{itemize}\small
+				\item \texttt{EXT:my\_extension/Initialisation/Extensions/}
+			\end{itemize}
+			\vspace{0.2cm}
+
+		\item Comme nous avons éliminé le format propriétaire \texttt{.t3x} en faveur
+			de fichiers \texttt{.zip}, l'option pour verser des fichiers \texttt{.t3x}
+			est retirée.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

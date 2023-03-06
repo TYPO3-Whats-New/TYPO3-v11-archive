@@ -1,0 +1,37 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 90799 | Dependency injection with non-public properties has been removed
+
+\begin{frame}[fragile]
+	\frametitle{Extbase et Fluid}
+	\framesubtitle{Injection de dépendances (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item L'option dépréciée d'utilisation de l'injection de dépendances
+			pour les propriétés non publiques est retirée.
+		\item L'exemple suivant montre une solution fonctionnelle\newline
+			\small(notez la portée \texttt{\textbf{public}}~!)\normalsize
+\begin{lstlisting}
+class Foo
+{
+  /**
+   * @var Service
+   * @TYPO3\CMS\Extbase\Annotation\Inject
+   */
+  public $service;
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

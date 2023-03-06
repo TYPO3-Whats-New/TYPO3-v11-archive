@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.0 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Breaking | 92693 | Remove LinkHandler Linktype in Linkvalidator
+
+\begin{frame}[fragile]
+	\frametitle{Divers}
+	\framesubtitle{Validateur de liens (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Le validateur de liens supporte divers types de liens tels que
+			\small\texttt{db}\normalsize, \small\texttt{file}\normalsize,
+			\small\texttt{external}\normalsize, etc.
+		\item Le type \small\texttt{linkhandler}\normalsize est obsolète depuis longtemps et est retiré.
+		\item Il est peu probable qu'une migration soit nécessaire.
+		\item Cependant, les intégrateurs doivent vérifier et retirer le type \texttt{linkhandler}
+			des TSconfig de page si existant~:
+\begin{lstlisting}
+mod.linkvalidator.linktypes = db,file,external,linkhandler
+\end{lstlisting}
+
+		\item Aussi, cette configuration ne doit plus être utilisée~:
+\begin{lstlisting}
+mod.linkvalidator.linkhandler.reportHiddenRecords = 0
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
