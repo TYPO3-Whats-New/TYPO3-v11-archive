@@ -1,0 +1,44 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 92430 | Use SVG Page Tree in Record Selector
+% Feature | 73176 | Filterable Trees in Record Selectors and Link Pickers
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Arborescence de pages et fichiers dans le sélecteur d'enregistrement}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item La même technologie utilisée pour l'arborescence des pages et des fichiers est
+			implémentée dans les fenêtre modales du backend~:
+			\begin{itemize}\normalsize
+				\item \textbf{Sélecteur d'enregistrement}\newline
+					\smaller(i.e. sélection une cible de raccourcis ou une page de stockage de plugin)\normalsize
+				\item \textbf{Sélecteur de fichier}\newline
+				 	\smaller(i.e. sélection d'un fichier pour une référence de fichier FAL en IRRE)\normalsize
+				\item \textbf{Sélecteur de lien}\newline
+					\smaller(i.e. sélection d'un lien vers une page, un élément de contenu, un fichier, un dossier,  ou un enregistrement personnalisé comme une actualité liée)\normalsize
+			\end{itemize}
+
+		\item Les options TSconfig existantes restent fonctionnelles, par exemple~:
+
+			\begin{itemize}\smaller
+				\item \texttt{options.pageTree.altElementBrowserMountPoints}
+				\item \texttt{options.folderTree.altElementBrowserMountPoints}
+			\end{itemize}\smaller
+	\end{itemize}
+
+\end{frame}
+
+% \begin{lstlisting}
+% options.pageTree.altElementBrowserMountPoints
+% options.folderTree.altElementBrowserMountPoints
+% \end{lstlisting}
+
+% ------------------------------------------------------------------------------

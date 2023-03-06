@@ -1,0 +1,60 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Feature | 93794 | Override TCA description with TSconfig
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{TCA Beschreibung (1)}
+
+	\begin{itemize}
+		\item Seit TYPO3 v9 kann jedes TCA-Feld eine Beschreibung neben seiner Bezeichnung
+			haben\newline
+			Zum Beispiel:
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=0.70\linewidth]{ChangesForIntegratorsAndDevelopers/1617959943-TableConfigurationArrayDescription}
+	\end{figure}
+	\vspace{-0.4cm}
+	\begin{itemize}
+		\item Integratoren können nun die Beschreibung mit Hilfe der Page TSconfig überschreiben.
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{TCA Beschreibung (2)}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Diese Option kann auch verwendet werden, um eine Beschreibung für ein Field festzulegen,
+			für das noch keine TCA-Beschreibung vorhanden ist
+	\end{itemize}
+
+	\begin{itemize}
+		\item Beispiel 1 - Setzen/Überschreiben einer Beschreibung:
+\begin{lstlisting}
+TCEFORM.<table>.<field>.description = <text>
+TCEFORM.tt_content.header.description = The headline is the text...
+\end{lstlisting}
+		\item Beispiel 2 - auf einer Basis pro Datensatztyp:
+\begin{lstlisting}
+TCEFORM.<table>.<field>.types.<type>.description = Description for <type>
+\end{lstlisting}
+		\item Beispiel 3 - Verweis auf eine Sprachdatei:
+\begin{lstlisting}
+TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:description
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

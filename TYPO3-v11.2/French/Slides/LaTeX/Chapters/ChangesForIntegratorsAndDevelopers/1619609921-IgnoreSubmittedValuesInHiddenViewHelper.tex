@@ -1,0 +1,35 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Important | 93398 | Possibility to ignore submitted values in HiddenViewHelper
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{ViewHelper \textit{Hidden}}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item L'argument \texttt{respectSubmittedDataValue} est ajouté
+			au ViewHelper \textit{Hidden}
+		\item Cet argument contrôle l'usage des valeurs soumises précédemment pour
+			le champ associé
+		\item Les cas d'usage typiques sont les sous-requêtes, lorsqu'Extbase traite une
+			ForwardResponse
+
+		\item Exemple~:
+\begin{lstlisting}
+<f:form.hidden
+  property="hiddenProperty"
+  value="{form.hiddenProperty}"
+  respectSubmittedDataValue="false" />
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

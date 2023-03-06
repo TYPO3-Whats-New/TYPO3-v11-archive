@@ -1,0 +1,114 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% ..........
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11.2 - What's New}
+\subtitle{Résumé des nouvelles fonctionnalités, changements et améliorations}
+\author{
+	\centerline{Traduit par~:}
+	\centerline{Pierrick Caillon}
+}
+
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11.2 - What's New}
+\begin{frame}[fragile]
+	\frametitle{Sommaire}
+	\framesubtitle{Sommaire}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+\include{Chapters/Introduction/TheFacts}
+\include{Chapters/Introduction/ExecutiveSummary}
+\include{Chapters/Introduction/SystemRequirements}
+\include{Chapters/Introduction/DevelopmentTimeline}
+\include{Chapters/Introduction/ReleaseDates}
+\include{Chapters/Introduction/InstallationTraditional}
+\include{Chapters/Introduction/InstallationComposer}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+\include{Chapters/BackendUserInterface/1618056830-SvgPageTreeInRecordSelector}
+\include{Chapters/BackendUserInterface/1618058137-ResizableNavigationForRecordSelectors}
+\include{Chapters/BackendUserInterface/1618653909-DeepLinkingInTheBackend}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1618056830-SvgPageTreeInRecordSelector}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1617963761-ListOfSystemLocales}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1618590895-MfaRequiredForSystemMaintainers}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1618060062-NewTcaTypeLanguage}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1617959943-TableConfigurationArrayDescription}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1617965186-DisableCanonicalAndHreflangPerPage}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1617967924-UserGroupLookupsInConditions}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1617957677-CacheForErrorPageHandling}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1618140569-EventAfterSiteConfigurationLoadedFromDistribution}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1619607624-GetFileForFolderObject}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1619609921-IgnoreSubmittedValuesInHiddenViewHelper}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+\include{Chapters/DeprecatedRemovedFunctions/1617883144-DeprecatedTypoScriptParserRelatedProperties}
+\include{Chapters/DeprecatedRemovedFunctions/1617966682-PropertySpecialOfTCATypeSelect}
+\include{Chapters/DeprecatedRemovedFunctions/1619606129-DeprecateNavigationFrameModule}
+\include{Chapters/DeprecatedRemovedFunctions/1619609244-TbeEditorFieldChanged}
+\include{Chapters/DeprecatedRemovedFunctions/1619610726-RteHtmlParserTransformation}
+
+% Chapter "Divers"
+\include{Chapters/Miscellaneous/ChapterTitle}
+\include{Chapters/Miscellaneous/1618061152-BackendUsersPreferredLanguage}
+\include{Chapters/Miscellaneous/1618141201-UpdateXliffVersion}
+\include{Chapters/Miscellaneous/1618142494-PackagesAndLibrariesUpdated}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewSlidesAndTranslations}
+
+% ------------------------------------------------------------------------------
+\end{document}

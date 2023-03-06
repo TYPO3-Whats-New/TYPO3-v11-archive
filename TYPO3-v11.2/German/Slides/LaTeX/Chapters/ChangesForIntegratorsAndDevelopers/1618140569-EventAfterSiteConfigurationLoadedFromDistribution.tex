@@ -1,0 +1,27 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Task | 93687 | Dispatch event after extension install with site config
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{PSR-14 Ereignis beim Importieren der Site-Konfiguration}
+
+	\lstset{basicstyle=\fontsize{10}{12}\ttfamily}
+
+	\begin{itemize}
+		\item Erweiterungen (Site-Pakete und "Distributionen") können Site-Konfigurationen bereitstellen
+		\item Diese Konfigurationen werden bereitgestellt, wenn die Erweiterungen installiert werden
+		\item Ein PSR-14-Ereignis wird jetzt beim Importieren der Site-Konfiguration versendet:
+\begin{lstlisting}
+\TYPO3\CMS\Extensionmanager\Event\AfterExtensionSiteFilesHaveBeenImportedEvent
+\end{lstlisting}
+		\item Dies ermöglicht dem benutzerdefinierten Code den Zugriff auf Details aus der neuen Site-Konfiguration
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,26 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Important | 88824 | Add cache for error page handling
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Caching von Fehlerseiten}
+
+	\begin{itemize}
+		\item Der Inhalt von 404-Fehlerseiten ("Seite nicht gefunden") wird nun
+			im Cache im TYPO3-Seitencache gespeichert.
+		\item Integratoren und Administratoren wird empfohlen, keine sensible
+			Informationen wie z.B. den Benutzernamen eines authentifizierten
+			Frontend-Benutzers.
+		\item Wenn die 404-Fehlerseite dynamische Inhalte zeigt, empfehlen wir,
+			einen eigenen PHP-basierten Error-Handler zu implementieren.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

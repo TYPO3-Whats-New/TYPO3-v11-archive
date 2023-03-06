@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93591 | Allow group id lookup in conditions with array operator
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Identifiant des groupes de l'utilisateur dans les conditions}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Les identifiants de groupe utilisateur suivants sont disponibles en TypoScript~:
+
+		\begin{itemize}
+			\item De l'\textbf{utilisateur backend} authentifié\newline
+				(sous \texttt{backend.user.userGroupIds} en frontend et backend)
+			\item De l'\textbf{utilisateur frontend} authentifié\newline
+				(sous \texttt{frontend.user.userGroupIds} en frontend)
+		\end{itemize}
+
+		\item Les intégrateurs peuvent alors utiliser les conditions TypoScript avec la syntaxe
+		    d'expression Symfony pour résoudre les groupes d'utilisateur
+		\item Exemples~:
+\begin{lstlisting}
+[4 in frontend.user.userGroupIds]
+\end{lstlisting}
+\vspace{-0.2cm}
+\begin{lstlisting}
+[2 in backend.user.userGroupIds]
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

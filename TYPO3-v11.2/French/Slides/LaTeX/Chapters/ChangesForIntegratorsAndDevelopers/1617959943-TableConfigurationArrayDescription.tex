@@ -1,0 +1,60 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93794 | Override TCA description with TSconfig
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Description TCA (1)}
+
+	\begin{itemize}
+		\item Depuis TYPO3 v9, tout champ TCA peut avoir une description à côté
+			de son libellé\newline
+			Par exemple~:
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=0.70\linewidth]{ChangesForIntegratorsAndDevelopers/1617959943-TableConfigurationArrayDescription.png}
+	\end{figure}
+	\vspace{-0.4cm}
+	\begin{itemize}
+		\item Les intégrateurs peuvent surcharger la description à l'aide du TSconfig de page
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Description TCA (2)}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item L'option permet aussi de définir une description pour un champ
+			qui ne fournit pas déjà de description TCA
+	\end{itemize}
+
+	\begin{itemize}
+		\item Exemple 1 - définir/surcharger une description~:
+\begin{lstlisting}
+TCEFORM.<table>.<field>.description = <text>
+TCEFORM.tt_content.header.description = The headline is the text...
+\end{lstlisting}
+		\item Exemple 2 - on fonction du type d'enregistrement~:
+\begin{lstlisting}
+TCEFORM.<table>.<field>.types.<type>.description = Description for <type>
+\end{lstlisting}
+		\item Exemple 3 - avec un fichier de langue~:
+\begin{lstlisting}
+TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:description
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

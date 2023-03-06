@@ -1,0 +1,44 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Feature | 92430 | Use SVG Page Tree in Record Selector
+% Feature | 73176 | Filterable Trees in Record Selectors and Link Pickers
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Seite und Dateibaum im Datensatzselektor}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Die gleichen Technologien, die für den Seiten- und Dateibaum verwendet werden, sind nun auch in
+			modalen Fenstern im Backend implementiert:
+			\begin{itemize}\normalsize
+				\item \textbf{Record Selector}\newline
+					\smaller(z.B. Auswahl eines Verknüpfungsziels oder einer Speicherseite eines Plugins)\normalsize
+				\item \textbf{File Selector}\newline
+				 	\smaller(z.B. Auswahl einer Datei für einen IRRE-basierten FAL-basierten Dateiverweis)\normalsize
+				\item \textbf{Link Picker}\newline
+					\smaller(z.B. Auswahl eines Links zu einer bestimmten Seite, Inhaltselement, Datei, Ordner oder benutzdefinierten Datensätzen, z.B. einer verwandten Nachricht)\normalsize
+			\end{itemize}
+
+		\item Bestehende TSconfig-Optionen bleiben funktionsfähig, zum Beispiel:
+
+			\begin{itemize}\smaller
+				\item \texttt{options.pageTree.altElementBrowserMountPoints}
+				\item \texttt{options.folderTree.altElementBrowserMountPoints}
+			\end{itemize}\smaller
+	\end{itemize}
+
+\end{frame}
+
+% \begin{lstlisting}
+% options.pageTree.altElementBrowserMountPoints
+% options.folderTree.altElementBrowserMountPoints
+% \end{lstlisting}
+
+% ------------------------------------------------------------------------------

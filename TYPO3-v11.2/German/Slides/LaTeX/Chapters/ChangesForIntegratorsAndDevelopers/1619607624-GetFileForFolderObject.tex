@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Feature | 93209 | FAL: Add getFile() to TYPO3/CMS/Core/Resource/Folder
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{FAL-Ordner Objekt}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Das FAL-Objekt
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Resource\textbackslash
+				Folder}\normalsize\newline
+			enthält nun eine neue Methode
+			\small\texttt{getFile()}\normalsize
+
+		\item Diese Funktion bietet eine bequeme Möglichkeit, eine Datei abzurufen
+		\item Beispiel:\newline
+			\small\textbf{Alte Vorgehensweise} (noch möglich)\normalsize
+\begin{lstlisting}
+$folder->getStorage()->getFileInFolder("filename.ext", $folder)
+\end{lstlisting}
+			\small\textbf{Neue Methode} (verfügbar seit TYPO3 v11.2)\normalsize
+\begin{lstlisting}
+$folder->getFile("filename.ext")
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

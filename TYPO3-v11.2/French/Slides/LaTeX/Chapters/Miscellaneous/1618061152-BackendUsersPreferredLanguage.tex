@@ -1,0 +1,28 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93663 | Backend Users preferred UI language stored as DB field
+
+\begin{frame}[fragile]
+	\frametitle{Divers}
+	\framesubtitle{Langue utilisateur Backend}
+
+	\begin{itemize}
+		\item La langue préférée de l'utilisateur Backend est enregistrée
+		    en base dans \texttt{be\_users.lang} même quand l'utilisateur
+		    modifie la langue
+		\item Précédemment, l'information de langue était seulement enregistrée
+		    dans ce champ initialement puis transféré dans sa configuration
+			\texttt{user->uc[lang]}
+		\item Un assistant de mise à jour migre les valeurs existantes de \texttt{uc}
+			dans le champ de la base de données
+		\item L'entrée \texttt{uc} est gardée synchronisée pour la compatibilité
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

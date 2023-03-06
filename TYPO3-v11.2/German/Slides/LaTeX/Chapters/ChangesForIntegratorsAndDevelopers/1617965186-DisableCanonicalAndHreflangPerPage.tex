@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Feature | 93188 | Possibility to disable hreflang per page (related: 93606)
+% Feature | 93606 | Possibility to disable canonical per page (related: 93188)
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{\texttt{hreflang} und/oder \texttt{kanonische} Tags deaktivieren}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item In einigen seltenen Fällen möchten Integratoren die in Links verwendeten
+			\texttt{hreflang-} und/oder \texttt{kanonische} Tags deaktivieren:
+\begin{lstlisting}
+<link rel="alternate" hreflang="de" href="..." />
+<link rel="canonical" href="..." />
+\end{lstlisting}
+		\item Dies ist nun seitenweise möglich, indem Sie TypoScript verwenden
+		\item Beispiele:
+\begin{lstlisting}
+# Disable hreflang attributes:
+config.disableHrefLang = 1
+\end{lstlisting}
+\vspace{-0.2cm}
+\begin{lstlisting}
+# Disable canonical URLs:
+config.disableCanonical = 1
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

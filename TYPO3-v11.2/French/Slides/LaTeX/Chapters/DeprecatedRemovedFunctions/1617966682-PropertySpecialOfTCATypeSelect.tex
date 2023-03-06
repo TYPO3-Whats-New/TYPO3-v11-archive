@@ -1,0 +1,35 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 93837 | Deprecated special property of TCA type select
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Propriété \texttt{special} de TCA \texttt{type=select}}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item La propriété \texttt{special} du TCA \texttt{type=select}
+			est marquée \textbf{dépréciée}
+		\item Les développeurs sont avisés d'utiliser \texttt{itemsProcFunc} à la place~:
+\begin{lstlisting}
+'config' => [
+  'type' => 'select',
+  // 'special' => 'tables',
+  'itemsProcFunc' => MyExtension::class . '->method',
+  ...
+]
+\end{lstlisting}
+
+		\item Plus d'informations à propos de \texttt{itemsProcFunc} peuvent être trouvées dans la
+		 	\href{https://docs.typo3.org/m/typo3/reference-tca/master/en-us/ColumnsConfig/CommonProperties/ItemsProcFunc.html}{documentation}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

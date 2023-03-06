@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93209 | FAL: Add getFile() to TYPO3/CMS/Core/Resource/Folder
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{FAL Folder Object}
+
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item The FAL object
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Resource\textbackslash
+				Folder}\normalsize\newline
+			now contains a new method
+			\small\texttt{getFile()}\normalsize
+
+		\item This function provides a convenient way to retrieve a file
+		\item Example:\newline
+			\small\textbf{Old approach} (still possible)\normalsize
+\begin{lstlisting}
+$folder->getStorage()->getFileInFolder("filename.ext", $folder)
+\end{lstlisting}
+			\small\textbf{New method} (available since TYPO3 v11.2)\normalsize
+\begin{lstlisting}
+$folder->getFile("filename.ext")
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

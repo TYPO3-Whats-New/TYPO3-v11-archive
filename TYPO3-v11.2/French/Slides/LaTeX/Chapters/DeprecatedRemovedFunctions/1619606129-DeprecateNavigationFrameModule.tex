@@ -1,0 +1,35 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.2 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 93944 | File Tree as iframe migrated to SVG-based tree
+
+\begin{frame}[fragile]
+	\frametitle{Fonctions dépréciées/retirées}
+	\framesubtitle{Ancien cadre de navigation arborescente}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Les modules Backend qui utilisent l'ancienne option d'enregistrement
+		    \texttt{file\_navframe} est marquée \textbf{dépréciée}
+		\item Il est conseillé aux développeurs d'extension de mettre à jour leur code dans
+			\texttt{ext\_tables.php}.
+\begin{lstlisting}
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule(
+  ...
+  [
+    // previously: 'navigationFrameModule' => 'file_navframe',
+    'navigationComponentId' => 'TYPO3/CMS/Backend/Tree/FileStorageTreeContainer',
+    ...
+  ]
+);
+\end{lstlisting}
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
