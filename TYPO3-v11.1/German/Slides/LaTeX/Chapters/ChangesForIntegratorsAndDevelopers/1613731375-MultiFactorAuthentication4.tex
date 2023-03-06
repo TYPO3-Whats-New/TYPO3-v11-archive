@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Feature | 93526 | Multi-Factor Authentication (4)
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Multi-Faktor-Authentifizierung (4)}
+
+	\begin{itemize}
+
+		\item \textbf{Der MFA-API ist noch experimentell und kann sich noch ändern}.
+
+		\item Erweiterungsentwicklern wird empfohlen, sich folgende PHP-Klassen anzuschauen:\newline
+			\small\texttt{typo3/sysext/core/Classes/Authentication/Mfa/}\normalsize
+
+		\item Einige Demo-Erweiterungen sind zum Beispiel::
+
+			\begin{itemize}\small
+				\item \href{https://github.com/derhansen/mfa_yubikey}{mfa\_yubikey}
+				\item \href{https://github.com/o-ba/mfa_hotp}{mfa\_hotp}
+				\item \href{https://github.com/bnf/mfa_webauthn}{mfa\_webauthn} (planned to be implemented in the TYPO3 Core in v11 LTS)
+			\end{itemize}\normalsize
+
+		\item Lesen Sie mehr über die aktuelle API im:
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.1/Feature-93526-MultiFactorAuthentication.html}{changelog}.
+
+		\item Wir brauchen Ihr Feedback! Bitte treten Sie dem Slack-Channel \texttt{\#mfa-in-core} bei
+			und teilen Sie Ihre Erfahrungen und Anforderungen mit uns.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

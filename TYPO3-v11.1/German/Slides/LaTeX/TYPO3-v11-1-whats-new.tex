@@ -1,0 +1,113 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% .
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11.1 - What's New}
+\subtitle{Zusammenfassung der neuen Funktionen, Änderungen und Verbesserungen}
+\author{
+	\centerline{erstellt von:}
+	\centerline{Michael Schams}
+	\centerline{übersetzt von:}
+	\centerline{Henrietta Kucsovan und Corina Miron}
+}
+\vspace*{-10ex}
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11.1 - What's New}
+\begin{frame}[fragile]
+	\frametitle{Kapitelübersicht}
+	\framesubtitle{Kapitelübersicht}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+\include{Chapters/Introduction/TheFacts}
+\include{Chapters/Introduction/ExecutiveSummary}
+\include{Chapters/Introduction/SystemRequirements}
+\include{Chapters/Introduction/DevelopmentTimeline}
+\include{Chapters/Introduction/ReleaseDates}
+\include{Chapters/Introduction/InstallationTraditional}
+\include{Chapters/Introduction/InstallationComposer}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+\include{Chapters/BackendUserInterface/1613731375-BackendMfaSetup}
+\include{Chapters/BackendUserInterface/1613729428-BackendModuleFilelist}
+\include{Chapters/BackendUserInterface/1612764665-ResizableNavigationComponent}
+\include{Chapters/BackendUserInterface/1612763310-ResetBackendUserModuleFilter}
+\include{Chapters/BackendUserInterface/1613179329-BackendModuleMenusAccessibility}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613731375-MultiFactorAuthentication1}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613731375-MultiFactorAuthentication2}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613731375-MultiFactorAuthentication3}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613731375-MultiFactorAuthentication4}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613186569-BackendRoutesHttpMethods}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613184704-LazyConsoleCommandListIntegrators}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613184704-LazyConsoleCommandListDeveloper}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613188713-IconOverlayForNewContentElementWizard}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613197522-FlexFormProcessor}
+\include{Chapters/ChangesForIntegratorsAndDevelopers/1613194504-BackendLoginImageAlt}
+
+% Chapter "Extbase and Fluid"
+\include{Chapters/ExtbaseAndFluid/ChapterTitle}
+\include{Chapters/ExtbaseAndFluid/1613198555-TypolinkViewhelperLinkWrapping}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+\include{Chapters/DeprecatedRemovedFunctions/1613187094-T3EditorCodeMirrorElement}
+\include{Chapters/DeprecatedRemovedFunctions/1613196704-RenameSortableJS}
+\include{Chapters/DeprecatedRemovedFunctions/1613382913-jQueryTooltips}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewTeam}
+
+% ------------------------------------------------------------------------------
+\end{document}

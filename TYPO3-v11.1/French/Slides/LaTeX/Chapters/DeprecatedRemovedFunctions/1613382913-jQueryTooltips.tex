@@ -1,0 +1,27 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Deprecation | 93506 | jQuery in tooltips
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{jQuery dans les info-bulles}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Passer des objets jQuery aux méthodes \texttt{show()} et \texttt{hide()}
+			du module \texttt{TYPO3/CMS/Backend/Tooltip} est marqué
+			\textbf{déprécié}.
+		\item L'usage émet un avertissement de dépréciation dans la console navigateur.
+		\item Option de migration~:
+			Passer un unique \texttt{HTMLElement} ou une \texttt{NodeList} au fonctions.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

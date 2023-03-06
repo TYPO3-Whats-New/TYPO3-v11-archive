@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Feature | 93174 | Lazy console command list
+
+\begin{frame}[fragile]
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Konsolen-Befehlsliste (2)}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Zwei neue Eigenschaften wurden zum \texttt{console.command}
+			Dependency Injection-Tag (zur Verwendung in der Datei \texttt{Services.yaml}) hinzugefügt:
+			\begin{itemize}
+				\item \texttt{description}
+				\item \texttt{hidden}
+			\end{itemize}
+			\vspace{0.2cm}
+		\item Die Beschreibung muss neben dem Befehlsnamen angegeben werden:
+\begin{lstlisting}
+services:
+  My\Namespace\Command\ExampleCommand:
+    tags:
+      - name: 'console.command'
+        command: 'my:example'
+        description: 'An example command that demonstrates some stuff'
+        hidden: false
+\end{lstlisting}
+
+		\item Autoren von Erweiterungen sollten diese Methode verwenden,
+			anstatt die Beschreibung über \texttt{\$this->setDescription()} zu setzen.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

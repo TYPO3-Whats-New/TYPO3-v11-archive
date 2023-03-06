@@ -1,0 +1,24 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93174 | Lazy console command list
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Liste des commandes console (1)}
+
+	\begin{itemize}
+		\item L'outil de ligne de commande TYPO3 n'instancie plus les commandes
+			console disponibles lorsqu'un utilisateur exécute \texttt{typo3 list}.
+		\item Ceci empêche les outils CLI de ralentir ou casser la liste
+			des commandes (i.e.\ si une commande ne peut être instanciée).
+		\item Les intégrateurs TYPO3 bénéficient d'une liste plus rapide et robuste.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

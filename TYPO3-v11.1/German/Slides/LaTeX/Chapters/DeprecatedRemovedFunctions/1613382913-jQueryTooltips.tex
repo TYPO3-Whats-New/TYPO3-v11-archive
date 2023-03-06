@@ -1,0 +1,28 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Deprecation | 93506 | jQuery in tooltips
+
+\begin{frame}[fragile]
+	\frametitle{Veraltete/Entfernte Funktionen}
+	\framesubtitle{jQuery in Tooltips}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Die Übergabe von jQuery-Objekten an die Methoden \texttt{show()} und \texttt{hide()}
+			des Moduls \texttt{TYPO3/CMS/Backend/Tooltip} wurde als
+			\textbf{veraltet} markiert.
+		\item Dies führt zu einer Deprecation-Warnung in der Konsole des Browsers.
+		\item Migrationsmöglichkeiten:
+			Ein einzelnes \texttt{HTMLElement} oder eine \texttt{NodeList} an die
+			Funktionen übermitteln.
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

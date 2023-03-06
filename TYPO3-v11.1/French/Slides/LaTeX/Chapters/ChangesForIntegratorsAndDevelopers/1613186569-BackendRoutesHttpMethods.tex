@@ -1,0 +1,42 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+% Feature | 93455 | Backend Routes restricted to specified HTTP methods
+
+\begin{frame}[fragile]
+	\frametitle{Changements pour les intégrateurs et développeurs}
+	\framesubtitle{Routes Backend}
+
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item Les routes Backend peuvent être restreintes aux méthodes HTTP.\newline
+			\small(i.e. \texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE})
+		\item La propriété optionnelle «~\texttt{methods}~» est définissable dans les fichiers~:
+			\begin{itemize}\smaller
+				\item \texttt{Configuration/Backend/Routes.php}
+				\item \texttt{Configuration/Backend/Ajax.php}
+			\end{itemize}
+			\vspace{0.2cm}
+		\item Par exemple~:
+\begin{lstlisting}
+return [
+  'my_route' => [
+    'path' => '/benni/my-route',
+    'methods' => ['POST'],
+    'target' => MyVendor\MyPackage\Controller\MyRouteController::class . '::submitAction'
+  ]
+];
+\end{lstlisting}
+
+		\item Aucune restriction n'est appliquée lorsque non définie.
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93526 | Multi-Factor Authentication (2)
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Multi-factor Authentication (2)}
+
+	\begin{itemize}
+
+		\item Additional providers can be added as TYPO3 extensions.
+
+		\item Providers also feature a locking functionality
+			(e.g.\ if OTP was entered wrongly multiple times).
+
+		\item The following global configuration controls if MFA is required:\newline
+			\smaller\texttt{\$GLOBALS['TYPO3\_CONF\_VARS']['BE']['requireMFA']}\normalsize
+
+			\begin{itemize}
+				\item \texttt{0}: MFA is optional (default)
+				\item \texttt{1}: MFA is required for all users
+				\item \texttt{2}: MFA is required for non-admin users only
+				\item \texttt{3}: MFA is required for admin users only
+			\end{itemize}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------

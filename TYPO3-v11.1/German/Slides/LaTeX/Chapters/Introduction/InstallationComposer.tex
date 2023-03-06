@@ -1,0 +1,38 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Installation using Composer
+
+\begin{frame}[fragile]
+	\frametitle{Installation und Upgrade}
+	\framesubtitle{Installation mit \texttt{Composer}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Installation mit \href{https://getcomposer.org}{PHP Composer} unter Linux, macOS, und Windows 10:
+\begin{lstlisting}
+$ cd /var/www/site/
+$ composer create-project typo3/cms-base-distribution:^11 typo3v11
+\end{lstlisting}
+
+		\item Alternativ eine benutzerdefinierte \texttt{composer.json} Datei erstellen und ausführen:
+\begin{lstlisting}
+$ composer install
+\end{lstlisting}
+
+		\item Das online-Tool \href{https://get.typo3.org/misc/composer/helper}{Composer Helper}
+			macht die Paketauswahl einfach.
+
+		\item Weitere Details:  
+			\href{https://docs.typo3.org/m/typo3/guide-installation/master/en-us/}{Installation and Upgrade Guide}.
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------

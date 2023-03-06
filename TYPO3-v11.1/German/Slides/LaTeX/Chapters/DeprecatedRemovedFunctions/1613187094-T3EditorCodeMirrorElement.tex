@@ -1,0 +1,34 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.1 - What's New (German Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		http://typo3.org/download/release-notes/whats-new/
+% @language	German
+% ------------------------------------------------------------------------------
+% Deprecation | 93149 | T3Editor JavaScript module replaced by CodeMirrorElement
+
+\begin{frame}[fragile]
+	\frametitle{Veraltete/Entfernte Funktionen}
+	\framesubtitle{T3Editor}
+
+	\begin{itemize}
+		\item Der T3Editor wurde in ein benutzerdefiniertes HTML-Element umstrukturiert:\newline
+			\smaller\texttt{<typo3-t3editor-codemirror>}\normalsize
+
+		\item Dieses Element verfügt über ein neues JavaScript-Modul:\newline
+			\small
+				\texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					T3editor\textbackslash
+					Element\textbackslash
+					CodeMirrorElement}
+			\normalsize
+
+		\item Die Verwendung der CSS-Klasse "\texttt{t3editor}" ist nun \textbf{veraltet}:\newline
+			\smaller\texttt{<textarea class="t3editor"> ... </textarea>}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
